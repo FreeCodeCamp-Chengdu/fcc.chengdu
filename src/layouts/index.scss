@@ -1,0 +1,39 @@
+$appWidth: 1160px;
+$menuHeight: 50px;
+$footerHeight: 200px;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000407;
+  font-family: sans-serif;
+
+  /* 整个项目的 */
+  .App {
+    width: $appWidth;
+    height: auto;
+    margin: auto;
+
+    /* 菜单 */
+    .Menu {
+      width: 100%;
+      height: $menuHeight;
+      line-height: $menuHeight;
+      background: inherit;
+      color: #fff;
+      padding: 0px 15px;
+      border: solid 1px rgb(27, 67, 154);
+    }
+
+    /* 底部 */
+    .Footer {
+      width: 100%;
+      height: $footerHeight;
+      background: #000;
+      color: #fff;
+      padding: 15px;
+      border: solid 1px rgb(27, 67, 154);
+    }
+  }  
+}
+

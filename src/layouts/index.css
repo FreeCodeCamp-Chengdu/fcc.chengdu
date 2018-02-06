@@ -1,0 +1,28 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000407;
+  font-family: sans-serif;
+  /* 整个项目的 */ }
+  body .App {
+    width: 1160px;
+    height: auto;
+    margin: auto;
+    /* 菜单 */
+    /* 底部 */ }
+    body .App .Menu {
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      background: inherit;
+      color: #fff;
+      padding: 0px 15px;
+      border: solid 1px #1b439a; }
+    body .App .Footer {
+      width: 100%;
+      height: 200px;
+      background: #000;
+      color: #fff;
+      padding: 15px;
+      border: solid 1px #1b439a; }
