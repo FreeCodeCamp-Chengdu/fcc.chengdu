@@ -1,0 +1,18 @@
+version: '2'
+services:
+  proxy:
+    image: rancher/lb-service-haproxy:v0.7.9
+    ports:
+    - 9988:9988/tcp
+    labels:
+      io.rancher.container.agent.role: environmentAdmin
+      io.rancher.container.create_agent: 'true'
+  captainblue2013-fcc-chengdu:
+    mem_limit: 104857600
+    image: captainblue2013/fcc.chengdu:master
+    environment:
+      PORT: '80'
+    stdin_open: true
+    external_links:
+    - db/db:mysql
+    tty: true
