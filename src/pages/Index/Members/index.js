@@ -9,6 +9,7 @@ class Index extends Component {
         return (
             <div className="Panel">
                 组织者风采展
+                <div style={{color: '#aaa'}}>备注：成员风采照、个人链接、昵称、社区中负责的职责</div>
             </div>
         );
     }

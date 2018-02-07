@@ -1,11 +1,9 @@
-$appWidth: 1160px;
-$menuHeight: 50px;
-$footerHeight: 200px;
+@import '../theme.scss';
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #000407;
+  background-color: $bgColor;
   font-family: sans-serif;
 
   /* 整个项目的 */
@@ -20,19 +18,29 @@ body {
       height: $menuHeight;
       line-height: $menuHeight;
       background: inherit;
-      color: #fff;
+      color: $fontColor;
       padding: 0px 15px;
-      border: solid 1px rgb(27, 67, 154);
+      border: solid 1px #006700;
+    }
+
+    .Content {
+      .Panel {
+        width: 100%;
+        min-height: 400px;
+        color: $fontColor;
+        padding: 15px;
+        border: solid 1px #006700;
+      }
     }
 
     /* 底部 */
     .Footer {
       width: 100%;
       height: $footerHeight;
-      background: #000;
-      color: #fff;
+      background: $bgColor;
+      color: $fontColor;
       padding: 15px;
-      border: solid 1px rgb(27, 67, 154);
+      border: solid 1px #006700;
     }
   }  
 }

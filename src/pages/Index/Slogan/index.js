@@ -9,6 +9,7 @@ class Index extends Component {
         return (
             <div className="Panel">
                 口号、宗旨
+                <div style={{color: '#aaa'}}>备注：倡导“人人皆可编程” 搭建一个有温度的技术社区</div>
             </div>
         );
     }

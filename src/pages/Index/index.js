@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 
+import Slogan from './Slogan';
+import Info from './Info';
+import Events from './Events';
+import Members from './Members';
+
 class Index extends Component {
     render() {
         return (
             <div className="Content">
-                社区主页
+                <Slogan />
+                <Info />
+                <Events />
+                <Members />
             </div>
         );
     }
