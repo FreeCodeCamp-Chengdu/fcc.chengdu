@@ -25,5 +25,8 @@
     "type": "react",
     "root": "./build",
     "publicUrl": "http://fcc.lanhao.name/fcc.chengdu"
+  },
+  "devDependencies": {
+    "less": "^2.7.3"
   }
 }
