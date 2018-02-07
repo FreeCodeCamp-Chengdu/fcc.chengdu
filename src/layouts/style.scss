@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: $bgColor;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 
   /* 整个项目的 */
   .App {
@@ -14,21 +14,22 @@ body {
 
     /* 菜单 */
     .Menu {
+      position: fixed;
+      top: 0px;
       width: 100%;
       height: $menuHeight;
       line-height: $menuHeight;
       background: inherit;
-      color: $fontColor;
+      color: #fff;
       padding: 0px 15px;
-      border: solid 1px #006700;
+      background: rgba(0, 0, 0, 0.8);
     }
 
     .Content {
       .Panel {
         width: 100%;
-        min-height: 400px;
+        height: $panelHeight;
         color: $fontColor;
-        padding: 15px;
         border: solid 1px #006700;
       }
     }

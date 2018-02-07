@@ -4,7 +4,7 @@ class Menu extends Component {
   render() {
     return (
       <div className="Menu">
-            菜单
+            菜单.FCC成都社区
       </div>
     );
   }
