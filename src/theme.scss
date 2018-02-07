@@ -13,3 +13,20 @@ $bgColor: #FFFEFF;
 $titleColor: #2F2F2F;
 $fontColor: #434343;
 
+.Panel {
+    .title {
+        position: relative;
+        letter-spacing: 0.8px;
+        font-family: 'Roboto Slab', serif;
+        margin-bottom: 20px;
+    }
+    .title::before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        height: 3px;
+        background: #DEDEDE;
+        width: 28px;
+        left: 0;
+    }
+}

@@ -4,21 +4,6 @@
     .bg-glay {
         background: #F2F1F2;
     }
-    .title {
-        position: relative;
-        letter-spacing: 0.8px;
-        font-family: 'Roboto Slab', serif;
-        margin-bottom: 20px;
-    }
-    .title::before {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        height: 3px;
-        background: #DEDEDE;
-        width: 28px;
-        left: 0;
-    }
     .info-panel {
         width: 100%;
         height: 100vh;

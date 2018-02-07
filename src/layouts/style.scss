@@ -23,6 +23,7 @@ body {
       color: #fff;
       padding: 0px 15px;
       background: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
     }
 
     .Content {
@@ -30,7 +31,7 @@ body {
         width: 100%;
         height: $panelHeight;
         color: $fontColor;
-        border: solid 1px #006700;
+        // border: solid 1px #006700;
       }
     }
 
