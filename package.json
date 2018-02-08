@@ -19,5 +19,11 @@
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "fcc": {
+    "name": "fcc.chengdu",
+    "type": "react",
+    "root": "./build",
+    "publicUrl": "http://fcc2018.lanhao.name"
   }
 }
