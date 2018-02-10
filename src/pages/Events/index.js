@@ -1,7 +1,8 @@
 /**
  * @desc 历史活动页面
  * @author 
- */
+*/
+import './style.css';
 import React, { Component } from 'react';
 
 import * as eventList from './index.json';
@@ -9,24 +10,25 @@ import * as eventList from './index.json';
 class Events extends Component {
     render() {
         return (
-            <div className="Panel">
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div className="Panel events">
+                <h4>历史活动</h4>
+                <div className="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                     {
                         eventList.map((item, index) => {
-                            return <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="headingOne">
-                              <h4 class="panel-title">
-                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                  {item.title}
-                                </a>
-                              </h4>
+                            return <div key={`event-panel-${index}`} className="panel panel-info">
+                                <div className="panel-heading" role="tab" id={`heading${index}`}>
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href={`#collapseOne${index}`} aria-expanded="false" aria-controls={`collapseOne${index}`} >
+                                        {`${index}: ${item.title}`}
+                                    </a>
+                                </div>
+                                <div id={`collapseOne${index}`} className="panel-collapse collapse" role="tabpanel" aria-labelledby={`heading${index}`}>
+                                    <div className="panel-body">
+                                        <p>时间：{item.time}</p>
+                                        <p>地址：{item.address}</p>
+                                        <p>描述：{item.describe}</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                              <div class="panel-body">
-                                {item.describe}
-                              </div>
-                            </div>
-                          </div>
                         })
                     }
                 </div>

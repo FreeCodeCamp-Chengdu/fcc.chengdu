@@ -1,6 +1,7 @@
 .index-slogan {
     border: none;
-    background: ('../../../pubilc/static/slogan-bg.jpg');
+    background: url('../../../assets/static/slogan-bg.jpg');
+    background-size: cover;
     .slogan {
         position: absolute;
         text-align: center;
