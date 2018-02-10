@@ -29,7 +29,8 @@ body {
     .Content {
       .Panel {
         width: 100%;
-        height: $panelHeight;
+        height: auto;
+        min-height: $panelHeight;
         color: $fontColor;
         // border: solid 1px #006700;
       }

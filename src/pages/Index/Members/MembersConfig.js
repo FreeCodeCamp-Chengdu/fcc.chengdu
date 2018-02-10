@@ -1,17 +1,18 @@
 import ccbImg from '../../../assets/images/ccb-min.jpg';
-import akImg from '../../../assets/images/Ak-min.jpg';
+// import akImg from '../../../assets/images/Ak-min.jpg';
 import glowd from '../../../assets/images/glowd-min.jpg';
 import Dean from '../../../assets/images/Dean-min.jpg';
+import CaiTing from '../../../assets/images/caiting-min.jpeg';
 import Helen from '../../../assets/images/Helen-min.jpg';
 import janeZhen from '../../../assets/images/janeZhen-min.jpg';
 import lanhao from '../../../assets/images/lanhao-min.jpg';
 import liunanbing from '../../../assets/images/liunanbing-min.jpg';
-import qianyu from '../../../assets/images/qianyu-min.jpg';
+// import qianyu from '../../../assets/images/qianyu-min.jpg';
 import qingsong from '../../../assets/images/qingsong-min.jpg';
 import shiyao from '../../../assets/images/shiyao-min.jpg';
 import Too from '../../../assets/images/Too-min.jpg';
 import wangbo from '../../../assets/images/wangbo-min.jpg';
-import wangjie from '../../../assets/images/wangjie-min.jpg';
+// import wangjie from '../../../assets/images/wangjie-min.jpg';
 import xiaoshan from '../../../assets/images/xiaoshan-min.jpg';
 import yuqi from '../../../assets/images/yuqi-min.jpg';
 
@@ -57,7 +58,7 @@ const MEMBERS = [{
   url: ''
 },{
   name : '蔡婷',
-  img : '',
+  img : CaiTing,
   responsibility:'活动策划',
   url: 'https://tech-query.me/'
 },{
