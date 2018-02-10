@@ -12,7 +12,7 @@ class Index extends Component {
                 <Slogan />
                 <Info />
                 <Events />
-                {/* <Members /> */}
+                <Members />
             </div>
         );
     }
