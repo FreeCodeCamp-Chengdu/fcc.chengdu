@@ -8,7 +8,7 @@ services:
       port_rules:
       - priority: 1
         protocol: http
-        service: captainblue2013-fcc-chengdu
+        service: freecodecamp-chengdu-fcc-chengdu
         source_port: 9988
         target_port: 80
     health_check:
@@ -19,6 +19,6 @@ services:
       initializing_timeout: 60000
       interval: 2000
       reinitializing_timeout: 60000
-  captainblue2013-fcc-chengdu:
+  freecodecamp-chengdu-fcc-chengdu:
     scale: 1
     start_on_create: true
