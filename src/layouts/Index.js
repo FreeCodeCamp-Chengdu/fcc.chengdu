@@ -18,12 +18,12 @@ class App extends Component {
     return (
       <div className="App">
         <Menu />
-        <Router>
+        {/* <Router>
           <div>
             <Route exact path="/" component={Index}></Route>
             <Route path="/events" component={Events} ></Route>
           </div>
-        </Router>
+        </Router> */}
         <Footer />
       </div>
     );
