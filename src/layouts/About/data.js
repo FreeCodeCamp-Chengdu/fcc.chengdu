@@ -4,7 +4,7 @@ import qrWeibo from '../../assets/images/qr-weibo.png';
 import qrGithub from '../../assets/images/qr-github.png';
 
 const details = [{
-        "title": "wechat",
+        "title": "weixin",
         "desc": "官方微信公众号",
         "img": qrWechat
     },

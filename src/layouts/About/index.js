@@ -4,6 +4,8 @@
  */
 
 import React, {Component} from 'react';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+
 import details from './data'
 import './style.css';
 
@@ -24,7 +26,6 @@ class Index extends Component {
 				<div>					
 					{
 						details.map((ele,index) => {
-							console.log(ele);
 							$(() => {
 								$(`#popover${index}`).popover(
 									{
@@ -36,8 +37,8 @@ class Index extends Component {
 								)
 							})
 							return (							
-								<button id={`popover${index}`} type="button" className="btn btn-lg btn-danger" data-placement="top">
-									{ele.title}
+								<button id={`popover${index}`} type="button" className="btn" data-placement="top">
+									<FontAwesomeIcon icon={["fab", ele.title]}/>
 								</button>)
 						})
 					}	
