@@ -7,9 +7,9 @@ services:
     labels:
       io.rancher.container.agent.role: environmentAdmin
       io.rancher.container.create_agent: 'true'
-  captainblue2013-fcc-chengdu:
+  freecodecamp-chengdu-fcc-chengdu:
     mem_limit: 104857600
-    image: captainblue2013/fcc.chengdu:master
+    image: freecodecamp-chengdu/fcc.chengdu:master
     environment:
       PORT: '80'
     stdin_open: true
