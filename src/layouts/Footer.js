@@ -21,7 +21,7 @@ class Footer extends Component {
           </div>
           <div className="col-5">
             <h5>联系我们</h5>
-            <About/> 
+            <About /> 
           </div>
         </div>
              

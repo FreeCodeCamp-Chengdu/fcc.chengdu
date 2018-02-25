@@ -24,13 +24,16 @@ class App extends Component {
     return (
       <div className="App">
         <Menu />
-        <Router>
-          <div>
-            <Route exact path="/" component={Index}></Route>
-            <Route path="/events" component={Events} ></Route>
-            <Route path="/sponsors" component={Sponsors} ></Route>
-          </div>
-        </Router>
+        <div>
+          <Router>
+            <div>
+              <Route exact path="/" component={Index}></Route>
+              <Route path="/events" component={Events} ></Route>
+              <Route path="/sponsors" component={Sponsors} ></Route>
+            </div>
+          </Router>
+
+        </div>
         <Footer />
       </div>
     );

@@ -14,7 +14,7 @@ class Index extends Component {
   }
 	render() {
 		return (
-			<div className="Panel members">
+			<div className="members">
 				组织者风采展
 				{this.renderMembers()}
 			</div>
