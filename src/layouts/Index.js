@@ -11,6 +11,12 @@ import Footer from './Footer';
 // 路由页面
 import Index from '../pages/Index/index';
 import Events from '../pages/Events/index';
+import Sponsors from '../pages/Sponsors/index';
+//图标
+import fontawesome from '@fortawesome/fontawesome'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import brands from '@fortawesome/fontawesome-free-brands'
+fontawesome.library.add(brands)
 
 class App extends Component {
   render() {
@@ -18,12 +24,16 @@ class App extends Component {
     return (
       <div className="App">
         <Menu />
-        <Router>
-          <div>
-            <Route exact path="/" component={Index}></Route>
-            <Route path="/events" component={Events} ></Route>
-          </div>
-        </Router>
+        <div>
+          <Router>
+            <div>
+              <Route exact path="/" component={Index}></Route>
+              <Route path="/events" component={Events} ></Route>
+              <Route path="/sponsors" component={Sponsors} ></Route>
+            </div>
+          </Router>
+
+        </div>
         <Footer />
       </div>
     );
