@@ -1,4 +1,6 @@
-@import '../theme.scss';
+ @import '../theme.scss';
+// @import '~antd/dist/antd.css';
+@import '~bootstrap/dist/css/bootstrap.min.css';
 
 body {
   margin: 0;
@@ -42,8 +44,11 @@ body {
       height: $footerHeight;
       background: $bgColor;
       color: $fontColor;
-      padding: 15px;
+      padding: 15px 3%;
       border: solid 1px #006700;
+      .left-content {
+        margin: 2rem 0;
+      }
     }
   }  
 }
