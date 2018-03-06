@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 //import {Row, Col} from 'antd';
 import About from './About'
-import $ from'jquery';
-require('popper.js');
-require ('bootstrap');
+// import $ from'jquery';
+// require('popper.js');
+// require ('bootstrap');
 
 class Footer extends Component {
   render() {

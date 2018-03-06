@@ -15,38 +15,39 @@ require ('bootstrap');
 // import {Row, Col, Popover, Button} from 'antd';
 class Index extends Component {
   showDetail(img, title){
-    return `<div class="detail-img">
-            <img src=${img} alt=${title}/>
-          </div>`
-	}
-	render() {
-
-		return (
-			<div className="about-container">
-				<div>					
-					{
-						details.map((ele,index) => {
-							$(() => {
-								$(`#popover${index}`).popover(
-									{
-										title: ele.desc,
-										trigger: 'focus',
-										content: this.showDetail(ele.img, ele.title),
-										html: true
-									}
-								)
-							})
-							return (							
-								<button id={`popover${index}`} type="button" className="btn" data-placement="top">
-									<FontAwesomeIcon icon={["fab", ele.title]}/>
-								</button>)
-						})
-					}	
-				</div>	
-			</div>
-		);
-	}
+      return `<div class="detail-img">
+              <img src=${img} alt=${title}/>
+            </div>`
+    }
+  render() {
+    return (
+      <div className="about-container">
+        <div>					
+          {
+            details.map((ele,index) => {
+              $(() => {
+                $(`#popover${index}`).popover({
+                  title: ele.desc,
+                  trigger: 'focus',
+                  content: this.showDetail(ele.img, ele.title),
+                  html: true,
+                  placement: 'top'	
+                });
+              });
+              return (							
+                <button id={`popover${index}`} type="button" className="btn" data-placement="top">
+                  <FontAwesomeIcon icon={["fab", ele.title]}/>
+                </button>
+              );
+            })
+          }	
+        </div>	
+      </div>
+    );
+  }
 }
+
+///////////////////////////////antd///////////////////////////////////
 // 	render() {
 // 		return (
 // 			<div className="about-container">
