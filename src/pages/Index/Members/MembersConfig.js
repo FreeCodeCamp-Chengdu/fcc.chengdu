@@ -21,6 +21,11 @@ const MEMBERS = [{
   responsibility:'社区负责人',
   url: 'https://github.com/jiangyuzhen'
 },{
+  name : 'AK',
+  img : akImg,
+  responsibility:'活动部',
+  url: ''
+},{
   name : '袁民成',
   img : Dean,
   responsibility:'文案与周边',
