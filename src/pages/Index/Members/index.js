@@ -8,16 +8,19 @@ import Card from './Card';
 import MEMBERS from './MembersConfig'
 class Index extends Component {
   renderMembers(){
-    return <div>
-      {MEMBERS.map(item =>{ return <Card detailData={item} key={item.name}/>})}
+    return <div className="members-list">
+      {MEMBERS.map((item,index) =>{ return <Card detailData={item} index={index} key={item.name}/>})}
     </div>
   }
 	render() {
 		return (
-			<div className="members">
-				组织者风采展
-				{this.renderMembers()}
-			</div>
+      <div className="members-block">
+        <div className="members">
+          <h2 className="title">组织者风采展</h2>
+          <h3 className="sub-title">Community members</h3>
+            {this.renderMembers()}
+        </div>
+      </div>
 		);
 	}
 }

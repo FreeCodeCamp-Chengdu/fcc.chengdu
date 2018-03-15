@@ -31,5 +31,8 @@
     "type": "react",
     "root": "./build",
     "publicUrl": "http://fcc2018.lanhao.name"
+  },
+  "devDependencies": {
+    "classnames": "^2.2.5"
   }
 }
