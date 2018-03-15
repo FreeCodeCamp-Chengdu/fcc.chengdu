@@ -1,9 +1,68 @@
-.members .card-img-top {
-  display: block;
-  width: 50%;
-  border-radius: 100%;
-  margin: 10px auto; }
+.members-block {
+  height: 746px;
+  background-color: #fff;
+  background-image: url("../../../assets/images/map.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain; }
 
-.members .card {
-  display: inline-block;
-  vertical-align: top; }
+.members {
+  width: 1280px;
+  height: 860px;
+  padding-top: 72px;
+  border-radius: 6px;
+  margin: 0 auto;
+  transform: translateY(-72px);
+  background-image: url("../../../assets/images/team.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1029px 532px;
+  text-align: center;
+  background-color: #fff; }
+  .members .title {
+    font-size: 20px;
+    margin-bottom: 7px; }
+  .members .sub-title {
+    font-size: 20px;
+    line-height: 36px;
+    margin-bottom: 34px;
+    color: rgba(0, 0, 0, 0.1); }
+  .members .members-list {
+    padding-top: 46px;
+    padding-bottom: 21px;
+    text-align: left; }
+  .members .card-img-top {
+    width: 100%;
+    border-radius: 100%; }
+  .members .member-item {
+    display: inline-block;
+    width: 220px;
+    height: 110px;
+    border-radius: 6px;
+    padding: 25px 18px 20px 20px;
+    font-size: 0;
+    margin-right: 44px;
+    margin-bottom: 25px; }
+  .members .member-item.last-item {
+    margin-right: 0; }
+  .members .img-block {
+    width: 59px;
+    height: 59px;
+    display: inline-block;
+    margin-right: 14px;
+    vertical-align: top; }
+  .members .content {
+    display: inline-block;
+    font-size: 12px;
+    width: 109px;
+    vertical-align: top; }
+  .members .name {
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px; }
+  .members a:link, .members a:visited {
+    color: #6e5ad0; }
+  .members .text-over {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }

@@ -37,8 +37,9 @@ class Index extends Component {
 								)
 							})
 							return (							
-								<button id={`popover${index}`} type="button" className="btn" data-placement="top">
-									<FontAwesomeIcon icon={["fab", ele.title]}/>
+								<button id={`popover${index}`} type="button" className="btn btn-link" data-placement="top">
+									{/* <FontAwesomeIcon icon={["fab", ele.title]}/> */}
+									<img src={ele.title} alt="icon"/>
 								</button>)
 						})
 					}	
