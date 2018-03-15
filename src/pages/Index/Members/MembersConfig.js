@@ -1,20 +1,20 @@
-import ccbImg from '../../../assets/images/ccb-min.jpg';
-// import akImg from '../../../assets/images/Ak-min.jpg';
-import glowd from '../../../assets/images/glowd-min.jpg';
-import Dean from '../../../assets/images/Dean-min.jpg';
-import CaiTing from '../../../assets/images/caiting-min.jpeg';
-import Helen from '../../../assets/images/Helen-min.jpg';
-import janeZhen from '../../../assets/images/janeZhen-min.jpg';
-import lanhao from '../../../assets/images/lanhao-min.jpg';
-import liunanbing from '../../../assets/images/liunanbing-min.jpg';
-// import qianyu from '../../../assets/images/qianyu-min.jpg';
-import qingsong from '../../../assets/images/qingsong-min.jpg';
-import shiyao from '../../../assets/images/shiyao-min.jpg';
-import Too from '../../../assets/images/Too-min.jpg';
-import wangbo from '../../../assets/images/wangbo-min.jpg';
-// import wangjie from '../../../assets/images/wangjie-min.jpg';
-import xiaoshan from '../../../assets/images/xiaoshan-min.jpg';
-import yuqi from '../../../assets/images/yuqi-min.jpg';
+import ccbImg from '../../../assets/avatars/ccb-min.jpg';
+import akImg from '../../../assets/avatars/Ak-min.jpg';
+import glowd from '../../../assets/avatars/glowd-min.jpg';
+import Dean from '../../../assets/avatars/Dean-min.jpg';
+import CaiTing from '../../../assets/avatars/caiting-min.jpeg';
+import Helen from '../../../assets/avatars/Helen-min.jpg';
+import janeZhen from '../../../assets/avatars/janeZhen-min.jpg';
+import lanhao from '../../../assets/avatars/lanhao-min.jpg';
+import liunanbing from '../../../assets/avatars/liunanbing-min.jpg';
+// import qianyu from '../../../assets/avatars/qianyu-min.jpg';
+import qingsong from '../../../assets/avatars/qingsong-min.jpg';
+import shiyao from '../../../assets/avatars/shiyao-min.jpg';
+import Too from '../../../assets/avatars/Too-min.jpg';
+import wangbo from '../../../assets/avatars/wangbo-min.jpg';
+// import wangjie from '../../../assets/avatars/wangjie-min.jpg';
+import xiaoshan from '../../../assets/avatars/xiaoshan-min.jpg';
+import yuqi from '../../../assets/avatars/yuqi-min.jpg';
 
 const MEMBERS = [{
   name : '姜姜姜',

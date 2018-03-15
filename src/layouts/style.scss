@@ -1,6 +1,6 @@
  @import '../theme.scss';
 // @import '~antd/dist/antd.css';
-@import '~bootstrap/dist/css/bootstrap.min.css';
+// @import '~bootstrap/dist/css/bootstrap.min.css';
 
 body {
   margin: 0;
@@ -44,10 +44,12 @@ body {
       height: $footerHeight;
       background: rgba(0,0,0,1);
       color: $fontColor;
-      border: solid 1px #006700;
       .footer-bg{
         height:100%;
+        width: 80%;
+        padding: 75px;
         position: relative;
+        margin: auto;
       }
       .left-content {
         // margin-top: 140px;
@@ -67,11 +69,15 @@ body {
         text-align: right;
       }
       .info {
-        position: absolute;
+        position: relative;
         bottom: 0;
-        width:100%;
-        height:60px; 
-        background:#0A0A0A;
+        width: 100%;
+        height: 60px; 
+        z-index: 1000;
+        background: #0A0A0A;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 0px 10%;
         p {
           font-size:12px;
           font-family:SourceHanSansCN-Regular;

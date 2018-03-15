@@ -22,4 +22,4 @@ yarn-error.log*
 
 # localhost
 .vscode/
-*.css
+/tool

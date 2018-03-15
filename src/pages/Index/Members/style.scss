@@ -1,7 +1,7 @@
 .members-block{
   height: 746px;
   background-color: #fff;
-  background-image: url('../../../assets/images/map.png');
+  background-image: url('../../../assets/images/banner2_bg.png');
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
@@ -13,19 +13,20 @@
   border-radius: 6px;
   margin: 0 auto;
   transform: translateY(-72px);
-  background-image: url('../../../assets/images/team.png');
+  background-image: url('../../../assets/images/banner4_bg.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1029px 532px;
   text-align: center;
   background-color: #fff;
+  box-shadow: 0px 0px 25px rgba(0,0,0,0.08);
   .title{
     font-size: 20px;
     margin-bottom: 7px;
   }
   .sub-title{
     font-size: 20px;
-    line-height:36px;
+    line-height: 36px;
     margin-bottom: 34px;
     color:rgba(0,0,0,0.1);
   }
@@ -43,14 +44,16 @@
     width:220px;
     height:110px;
     border-radius: 6px;
-    padding: 25px 18px 20px 20px;
+    padding: 25px 18px 25px 20px;
     font-size: 0;
     margin-right: 44px;
     margin-bottom: 25px;
-    // box-shadow:2px 1px 30px rgba(0,0,0,0.08) ;
   }
   .member-item.last-item{
     margin-right: 0;
+  }
+  .member-item:hover {
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.08);
   }
   .img-block{
     width: 59px;
@@ -64,6 +67,7 @@
     font-size: 12px;
     width: 109px;
     vertical-align: top;
+    margin-top: -20px;
   }
   .name{
     width: 100%;
