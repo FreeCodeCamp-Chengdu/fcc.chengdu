@@ -14,9 +14,6 @@ import Index from '../pages/Index/index';
 import Events from '../pages/Events/index';
 import Sponsors from '../pages/Sponsors/index';
 
-import Main from '../pages/Main/index'
-
-
 //图标
 import fontawesome from '@fortawesome/fontawesome'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
