@@ -15,7 +15,7 @@ require ('bootstrap');
 // import {Row, Col, Popover, Button} from 'antd';
 class Index extends Component {
   showDetail(img, title){
-    return `<div class="detail-img">
+    return `<div className="detail-img">
             <img src=${img} alt=${title}/>
           </div>`
 	}
@@ -23,7 +23,7 @@ class Index extends Component {
 
 		return (
 			<div className="about-container">
-				<div>					
+				<div>
 					{
 						details.map((ele,index) => {
 							$(() => {
@@ -36,35 +36,16 @@ class Index extends Component {
 									}
 								)
 							})
-							return (							
-								<button id={`popover${index}`} type="button" className="btn btn-link" data-placement="top">
-									{/* <FontAwesomeIcon icon={["fab", ele.title]}/> */}
-									<img src={ele.title} alt="icon"/>
+							return (
+								<button id={`popover${index}`} type="button" className="btn" data-placement="top">
+									<FontAwesomeIcon icon={["fab", ele.title]}/>
 								</button>)
 						})
-					}	
-				</div>	
+					}
+				</div>
 			</div>
 		);
 	}
 }
-// 	render() {
-// 		return (
-// 			<div className="about-container">
-// 				<Row gutter={16} type="flex" justify="space-around" align="middle">
-// 					{
-// 						details.map((ele) => {
-// 							return <Col className="gutter-row" span={12}>
-// 												<Popover title={ele.desc} content={this.showDetail(ele.img, ele.title)} trigger="click" >
-// 													<Button  className="detail-button" shape="circle" icon={ele.title} size="large"></Button>
-// 												</Popover>
-// 											</Col>
-// 						})
-// 					}
-// 				</Row>		
-// 			</div>
-// 		);
-// 	}
-// }
 
 export default Index;
