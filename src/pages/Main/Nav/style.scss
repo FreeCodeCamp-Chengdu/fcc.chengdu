@@ -1,0 +1,11 @@
+.Nav{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 17px;
+  a{
+    line-height: 45px;
+    font-size: 16px;
+    color: #fff !important;
+    margin-left: 20px;
+  }
+}

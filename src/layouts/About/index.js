@@ -15,7 +15,7 @@ require ('bootstrap');
 // import {Row, Col, Popover, Button} from 'antd';
 class Index extends Component {
   showDetail(img, title){
-    return `<div class="detail-img">
+    return `<div className="detail-img">
             <img src=${img} alt=${title}/>
           </div>`
 	}
@@ -23,7 +23,7 @@ class Index extends Component {
 
 		return (
 			<div className="about-container">
-				<div>					
+				<div>
 					{
 						details.map((ele,index) => {
 							$(() => {
@@ -36,13 +36,13 @@ class Index extends Component {
 									}
 								)
 							})
-							return (							
+							return (
 								<button id={`popover${index}`} type="button" className="btn" data-placement="top">
 									<FontAwesomeIcon icon={["fab", ele.title]}/>
 								</button>)
 						})
-					}	
-				</div>	
+					}
+				</div>
 			</div>
 		);
 	}
@@ -60,7 +60,7 @@ class Index extends Component {
 // 											</Col>
 // 						})
 // 					}
-// 				</Row>		
+// 				</Row>
 // 			</div>
 // 		);
 // 	}
