@@ -4,7 +4,7 @@
  */
 import './style.css';
 import React, { Component } from 'react';
-import bannerIcon from '../../../assets/images/banner-icon.png';
+import bannerIcon from '../../../../assets/images/banner-icon.png';
 
 class Index extends Component {
     render() {

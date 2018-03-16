@@ -19,20 +19,26 @@ body {
       position: fixed;
       top: 0px;
       width: 100%;
-      height: $menuHeight;
-      line-height: $menuHeight;
       background: inherit;
-      color: #fff;
-      padding: 0px 15px;
-      background: rgba(0, 0, 0, 0.8);
       z-index: 1000;
+      .Nav{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 17px;
+        a{
+          line-height: 45px;
+          font-size: 16px;
+          color: #fff !important;
+          margin-left: 20px;
+        }
+      }
     }
 
     .Content {
       .Panel {
         width: 100%;
         height: auto;
-        min-height: $panelHeight;
+        // min-height: $panelHeight;
         color: $fontColor;
         // border: solid 1px #006700;
       }

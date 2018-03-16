@@ -1,9 +1,10 @@
 .index-info {
     padding: 0px;
+    max-height: 666px;
     .info-row{
         width: 80%;
-        margin: 85px auto;
-        padding: 48px 78px;
+        margin: 80px auto;
+        padding: 0px 78px 48px;
         background: url('../../../assets/images/banner3_bg.png');
         background-size: cover;
         img {

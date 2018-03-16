@@ -29,9 +29,7 @@ class App extends Component {
     return (
       <div className="App">
         {/* <Menu /> */}
-        <Main />
-
-         <div style={{border: '1px solid red'}}>
+         <div>
           <Router>
             <div>
               <Route exact path="/" component={Index}></Route>

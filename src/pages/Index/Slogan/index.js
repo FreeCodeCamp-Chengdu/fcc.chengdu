@@ -4,16 +4,16 @@
  */
 import './style.css';
 import React, { Component } from 'react';
+import Nav from './Nav';
+import Banner from './Banner';
 
 class Index extends Component {
     render() {
         return (
             <div className="Panel index-slogan">
-                <div className="slogan">
-                    <h4>社区价值观</h4>
-                    <br />
-                    <span>倡导"人人皆可编程"</span>
-                    <span>营造有温度的技术社区</span>
+                <div className="MainContent">
+                    <Nav />
+                    <Banner />
                 </div>
             </div>
         );

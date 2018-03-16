@@ -12,7 +12,6 @@ import './style.css';
 import $ from'jquery';
 require('popper.js');
 require ('bootstrap');
-// import {Row, Col, Popover, Button} from 'antd';
 class Index extends Component {
   showDetail(img, title){
     return `<div className="detail-img">

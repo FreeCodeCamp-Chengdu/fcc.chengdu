@@ -5,7 +5,7 @@
 import './style.css';
 import React, { Component } from 'react';
 
-import logo from '../../../assets/images/fcc-logo.png';
+import logo from '../../../../assets/images/fcc-logo.png';
 
 class Index extends Component {
     render() {
