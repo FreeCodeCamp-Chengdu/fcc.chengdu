@@ -1,12 +1,86 @@
+.members-block{
+  height: 746px;
+  background-color: #fff;
+  background-image: url('../../../assets/images/banner2_bg.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
 .members{
-  .card-img-top{
-    display: block;
-    width: 50%;
-    border-radius: 100%;
-    margin: 10px auto;
+  width: 1280px;
+  height: 860px;
+  padding-top: 72px;
+  border-radius: 6px;
+  margin: 0 auto;
+  transform: translateY(-72px);
+  background-image: url('../../../assets/images/banner4_bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1029px 532px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 25px rgba(0,0,0,0.08);
+  .title{
+    font-size: 20px;
+    margin-bottom: 7px;
   }
-  .card{
+  .sub-title{
+    font-size: 20px;
+    line-height: 36px;
+    margin-bottom: 34px;
+    color:rgba(0,0,0,0.1);
+  }
+  .members-list{
+    padding-top: 46px;
+    padding-bottom: 21px;
+    text-align: left;
+  }
+  .card-img-top{
+    width: 100%;
+    border-radius: 100%;
+  }
+  .member-item{
     display: inline-block;
+    width:220px;
+    height:110px;
+    border-radius: 6px;
+    padding: 25px 18px 25px 20px;
+    font-size: 0;
+    margin-right: 44px;
+    margin-bottom: 25px;
+  }
+  .member-item.last-item{
+    margin-right: 0;
+  }
+  .member-item:hover {
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.08);
+    transform: scale(1.05);
+  }
+  .img-block{
+    width: 59px;
+    height: 59px;
+    display:inline-block;
+    margin-right: 14px;
     vertical-align: top;
+  }
+  .content{
+    display: inline-block;
+    font-size: 12px;
+    width: 109px;
+    vertical-align: top;
+    margin-top: -20px;
+  }
+  .name{
+    width: 100%;
+    font-weight: 400;
+    font-size:16px;
+  }
+  a:link,a:visited{
+    color:rgba(110,90,208,1);
+  }
+  .text-over{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
   }
 }

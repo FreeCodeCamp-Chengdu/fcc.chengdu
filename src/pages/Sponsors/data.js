@@ -1,6 +1,6 @@
-import logoMicroSoft from '../../assets/images/Microsoft.png';
-import logoBBD from '../../assets/images/BBD.png';
-import logoGDG from '../../assets/images/GDG.png';
+import logoMicroSoft from '../../assets/sponsors/Microsoft.png';
+import logoBBD from '../../assets/sponsors/BBD.png';
+import logoGDG from '../../assets/sponsors/GDG.png';
 
 const sponsors = [
     {

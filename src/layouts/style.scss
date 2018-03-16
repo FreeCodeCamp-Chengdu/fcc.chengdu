@@ -1,6 +1,6 @@
  @import '../theme.scss';
 // @import '~antd/dist/antd.css';
-@import '~bootstrap/dist/css/bootstrap.min.css';
+// @import '~bootstrap/dist/css/bootstrap.min.css';
 
 body {
   margin: 0;
@@ -31,7 +31,8 @@ body {
     .Content {
       .Panel {
         width: 100%;
-        height: $panelHeight;
+        height: auto;
+        min-height: $panelHeight;
         color: $fontColor;
         // border: solid 1px #006700;
       }
@@ -41,12 +42,54 @@ body {
     .Footer {
       width: 100%;
       height: $footerHeight;
-      background: $bgColor;
+      background: rgba(0,0,0,1);
       color: $fontColor;
-      padding: 15px 3%;
-      border: solid 1px #006700;
+      .footer-bg{
+        height:100%;
+        width: 80%;
+        padding: 75px;
+        position: relative;
+        margin: auto;
+      }
       .left-content {
-        margin: 2rem 0;
+        // margin-top: 140px;
+        text-align: left;
+        img {
+          width: 78px;
+          height:45px;
+        }
+        p {
+          margin-top: 10px;
+          color: #fff;
+          font-size: 14px;
+        }
+      }
+      .right-content {
+        // margin-top: 150px;
+        text-align: right;
+      }
+      .info {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        height: 60px; 
+        z-index: 1000;
+        background: #0A0A0A;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 0px 10%;
+        p {
+          font-size:12px;
+          font-family:SourceHanSansCN-Regular;
+          color:#545454;
+          margin: 0;
+          &.left{
+            text-align: left;
+          }
+          &.right{
+            text-align: right;
+          }
+        }
       }
     }
   }  

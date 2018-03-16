@@ -4,7 +4,7 @@
  */
 
 import React, {Component} from 'react';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+// import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
 import details from './data'
 import './style.css';
@@ -47,23 +47,5 @@ class Index extends Component {
 		);
 	}
 }
-// 	render() {
-// 		return (
-// 			<div className="about-container">
-// 				<Row gutter={16} type="flex" justify="space-around" align="middle">
-// 					{
-// 						details.map((ele) => {
-// 							return <Col className="gutter-row" span={12}>
-// 												<Popover title={ele.desc} content={this.showDetail(ele.img, ele.title)} trigger="click" >
-// 													<Button  className="detail-button" shape="circle" icon={ele.title} size="large"></Button>
-// 												</Popover>
-// 											</Col>
-// 						})
-// 					}
-// 				</Row>
-// 			</div>
-// 		);
-// 	}
-// }
 
 export default Index;
