@@ -31,7 +31,7 @@ class App extends Component {
         {/* <Menu /> */}
         <Main />
 
-        {/* <div style={{border: '1px solid red'}}>
+         <div style={{border: '1px solid red'}}>
           <Router>
             <div>
               <Route exact path="/" component={Index}></Route>
@@ -40,7 +40,7 @@ class App extends Component {
             </div>
           </Router>
 
-        </div> */}
+        </div> 
         <Footer />
       </div>
     );
