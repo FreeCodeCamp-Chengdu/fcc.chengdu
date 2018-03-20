@@ -1,9 +1,9 @@
 .members-block{
-  height: 746px;
+  height: 680px;
   background-color: #fff;
   background-image: url('../../../assets/images/banner2_bg.png');
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: 0 169px;
   background-size: contain;
 }
 .members{
@@ -12,27 +12,33 @@
   padding-top: 72px;
   border-radius: 6px;
   margin: 0 auto;
-  transform: translateY(-72px);
-  background-image: url('../../../assets/images/banner4_bg.png');
-  background-repeat: no-repeat;
-  background-position: center;
+  transform: translateY(-127px);
   background-size: 1029px 532px;
   text-align: center;
   background-color: #fff;
   .title{
     font-size: 20px;
+    line-height: 1;
+    margin-top: 0;
+    font-weight: 700;
     margin-bottom: 7px;
   }
   .sub-title{
     font-size: 20px;
     line-height: 36px;
-    margin-bottom: 34px;
+    margin-bottom: 12px;
+    font-weight: 700;
+    line-height: 1;
+    margin-top: 0;
     color:rgba(0,0,0,0.1);
   }
   .members-list{
     padding-top: 46px;
     padding-bottom: 21px;
     text-align: left;
+    background-image: url('../../../assets/images/banner4_bg.png');
+    background-repeat: no-repeat;
+    background-position:top center;
   }
   .card-img-top{
     width: 100%;
@@ -73,6 +79,10 @@
     width: 100%;
     font-weight: 400;
     font-size:16px;
+    color: #000;
+  }
+  .responsibility{
+    color:#515151;
   }
   a:link,a:visited{
     color:rgba(110,90,208,1);
