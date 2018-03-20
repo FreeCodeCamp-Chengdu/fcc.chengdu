@@ -37,7 +37,7 @@ class Index extends Component {
 							})
 							return (
 								<button id={`popover${index}`} type="button" className="btn" data-placement="top">
-									<FontAwesomeIcon icon={["fab", ele.title]}/>
+									<i className={`iconfont ${ele.icon}`}></i>
 								</button>)
 						})
 					}

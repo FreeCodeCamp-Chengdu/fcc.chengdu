@@ -10,22 +10,26 @@ import iconQq from '../../assets/images/qq-icon.png';
 const details = [{
         "title": iconWechat,
         "desc": "官方微信公众号",
-        "img": qrWechat
+        "img": qrWechat,
+        "icon": "icon-weixin"
     },
     {
         "title": iconQq,
         "desc": "官方QQ群",
-        "img": qrQq
+        "img": qrQq,
+        "icon": "icon-iconfonticon6"
     },
     {
         "title": iconWeibo,
         "desc": "官方微博",
-        "img": qrWeibo
+        "img": qrWeibo,
+        "icon": "icon-weibo"
     },
     {
         "title": iconGithub,
         "desc": "官方github",
-        "img": qrGithub
+        "img": qrGithub,
+        "icon": "icon-github"
     },
 ];
 

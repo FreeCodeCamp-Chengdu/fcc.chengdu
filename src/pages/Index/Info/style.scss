@@ -1,17 +1,31 @@
+@import '../../../theme.scss';
+
 .index-info {
     padding: 0px;
-    max-height: 690px;
+    max-height: 688px;
     .info-row{
-        width: 80%;
-        margin: 80px auto;
-        padding: 0px 78px 48px;
+        width: $contentWidth;
+        max-width: $contentMaxWidth;
+        margin: 34px auto;
+        padding: 0px 5%;
         background: url('../../../assets/images/banner3_bg.png');
         background-size: cover;
-        img {
-            max-width: 100%;
+        .ImagePanel {
+            text-align: center;
+            img {
+                max-width: 100%;
+            }
+        }
+        .ImagePanel:nth-child(1){
+            margin-top: -50px;
+        }
+        .ImagePanel:nth-child(2){
+            margin-top: 20px;
         }
         .row{
-            margin-bottom: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
     .info-panel {
@@ -19,10 +33,10 @@
         line-height: 34px;
         letter-spacing: 0.5px;
         font-weight: 300;
-        padding: 60px;
         .title{
             font-size: 20px;
             font-weight: bold;
+            color: #000;
         }
         p {
             color: #515151;

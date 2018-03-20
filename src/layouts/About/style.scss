@@ -2,9 +2,10 @@
 
 .btn {
     margin: 5px 5px;
-    img {
-        height: 26px;
-        width: 26px;
+    background: inherit;
+    i {
+        font-size: 26px;
+        color: #fff;
     }
 }
 .detail-img {

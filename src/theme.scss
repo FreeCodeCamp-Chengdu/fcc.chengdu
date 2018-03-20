@@ -4,29 +4,34 @@
  */
 
 $appWidth: 100%;
-$menuHeight: 50px;
+$menuHeight: 80px;
 $panelHeight: 100vh;
 $footerHeight: 358px;
+
+$contentWidth: 80%;
+$contentMaxWidth: 1280px;
 
 
 $bgColor: #FFFEFF;
 $titleColor: #2F2F2F;
 $fontColor: #434343;
 
+
+// 全局标签样式
+a:hover {
+  text-decoration: none;
+}
+
+div, p, a {
+    padding: 0px;
+}
+
+// 自定义公共样式
 .Panel {
     .title {
         position: relative;
         letter-spacing: 0.8px;
-        font-family: 'Roboto Slab', serif;
         margin-bottom: 20px;
     }
-    .title::before {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        height: 3px;
-        background: #DEDEDE;
-        width: 28px;
-        left: 0;
-    }
 }
+

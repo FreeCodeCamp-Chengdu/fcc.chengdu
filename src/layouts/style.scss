@@ -1,32 +1,35 @@
  @import '../theme.scss';
-// @import '~antd/dist/antd.css';
-// @import '~bootstrap/dist/css/bootstrap.min.css';
 
 body {
   margin: 0;
   padding: 0;
   background-color: $bgColor;
-  font-family: 'Roboto', sans-serif;
 
   /* 整个项目的 */
   .App {
     width: $appWidth;
     height: auto;
-    margin: auto;
 
     /* 菜单 */
     .Menu {
-      position: fixed;
+      position: absolute;
       top: 0px;
       width: 100%;
+      height: $menuHeight;
       background: inherit;
       z-index: 1000;
-      .Nav{
+      .Nav {
+        width: $contentWidth;
+        max-width: $contentMaxWidth;
         display: flex;
         justify-content: space-between;
-        margin-top: 17px;
+        align-items: center;
+        margin: auto;
+        line-height: $menuHeight;
+        img {
+          height: 45px;
+        }
         a{
-          line-height: 45px;
           font-size: 16px;
           color: #fff !important;
           margin-left: 20px;
@@ -40,7 +43,6 @@ body {
         height: auto;
         // min-height: $panelHeight;
         color: $fontColor;
-        // border: solid 1px #006700;
       }
     }
 
@@ -53,7 +55,7 @@ body {
       .footer-bg{
         height:100%;
         width: 80%;
-        padding: 75px;
+        padding: 95px 0px 75px;
         position: relative;
         margin: auto;
       }
@@ -86,7 +88,6 @@ body {
         padding: 0px 10%;
         p {
           font-size:12px;
-          font-family:SourceHanSansCN-Regular;
           color:#545454;
           margin: 0;
           &.left{
