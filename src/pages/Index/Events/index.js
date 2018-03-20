@@ -7,13 +7,34 @@ import React, { Component } from 'react';
 
 const Events = require('./events.json');
 
+
 class Index extends Component {
-    toLeft = () => {
-        // 向左移
+    constructor() {
+        super();
+        this.state = {
+            eventLists: Events.events
+        }
     }
 
-    toRight = () => {
-        // 向右移
+    componentDidMount() {
+        var mySwiper = new window.Swiper('.swiper-container', {
+            grabCursor: true,
+            setWrapperSize: true,
+            roundLengths: true,
+            a11y: true, // 无障碍
+            autoplay: true,
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            spaceBetween: 20,
+            loop : true,
+            navigation: {
+                nextEl: '#swiper-button-next',
+                prevEl: '#swiper-button-prev',
+            }
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // }
+        });
     }
 
     render() {
@@ -36,19 +57,24 @@ class Index extends Component {
 
                 <div className="content-events">
                     <div className="events-slider">
-                        <i onClick={this.toLeft} className="iconfont icon-jiantou1-copy-copy-copy"></i>
-                        <i onClick={this.toRight} className="iconfont icon-jiantou1-copy"></i>
-                        <div className="slider-content">
-                            {
-                                Events && Events.events.map((item, index) => {
-                                    return (
-                                        <div className="event-panel">
-                                            <img src={require(`../../../assets/events/${item.url}`)} />
-                                            <p>{item.title}</p>
-                                        </div>
-                                    )
-                                })
-                            }
+                        <i id="swiper-button-prev" className="iconfont icon-jiantou1-copy-copy-copy"></i>
+                        <i id="swiper-button-next" className="iconfont icon-jiantou1-copy"></i>
+                        <div className="swiper-container">
+                            <div className="swiper-wrapper slider-content" style={{ width: Events.length * 455 }}>
+                                {
+                                    Events && Events.events.map((item, index) => {
+                                        return (
+                                            <div className="swiper-slide event-panel">
+                                                <div className="">
+                                                    <img src={require(`../../../assets/events/${item.url}`)} />
+                                                    <p>{item.title}</p>
+                                                </div>
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </div>
+                            {/* <div class="swiper-scrollbar"></div> */}
                         </div>
                     </div>
                 </div>
