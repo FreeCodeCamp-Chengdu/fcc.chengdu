@@ -94,11 +94,9 @@ $titlePanelWidth: 200px;
             font-weight: bold;
         }
         .content-events{
-            // position: relative;
-            // top: 360px;
             height: 360px;
             clear: both;
-            margin-right: -10%;
+            margin-right: -10vw;
             @media (min-width: 1600px){
                 margin-right: calc( (1280px - 100vw) / 2 );
             }
