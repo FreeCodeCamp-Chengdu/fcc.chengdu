@@ -99,6 +99,9 @@ $titlePanelWidth: 200px;
             height: 360px;
             clear: both;
             margin-right: -10%;
+            @media (min-width: 1600px){
+                margin-right: calc( (1280px - 100vw) / 2 );
+            }
             .events-slider {
                 width: auto;
                 height: 100%;

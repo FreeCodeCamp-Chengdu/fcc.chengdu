@@ -9,6 +9,9 @@ a:hover {
 div, p, a {
   padding: 0px; }
 
+*:focus {
+  outline: none; }
+
 .Panel .title {
   position: relative;
   letter-spacing: 0.8px;

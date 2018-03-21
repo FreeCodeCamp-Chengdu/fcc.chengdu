@@ -38,11 +38,18 @@ class Index extends Component {
             // }
         });
     }
+    
+    setMarginLeft() {
+        let bodyWidth = document.body.clientWidth;
+        let panelWidt = document.getElementById("index-events").clientWidth;
+        document.getElementsByClassName("content-events").marginRight = (panelWidt - bodyWidth) / 2 + 'px';
+    }
 
     render() {
+      
         return (
             <div className="Panel index-events">
-                <div className="MainContainer">
+                <div className="MainContainer" id="index-events">
                     {/* 标题 */}
                     <div className="TitleRow">
                         <div className="title-panel">

@@ -3,45 +3,29 @@
  * @author
  */
 
-import React, {Component} from 'react';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-
+import React, { Component } from 'react';
 import details from './data'
 import './style.css';
 
-import $ from'jquery';
-require('popper.js');
-require ('bootstrap');
 class Index extends Component {
-  showDetail(img, title){
-    return `<div className="detail-img">
-            <img src=${img} alt=${title}/>
-          </div>`
-	}
 	render() {
 
 		return (
 			<div className="about-container">
-				<div>
-					{
-						details.map((ele,index) => {
-							$(() => {
-								$(`#popover${index}`).popover(
-									{
-										title: ele.desc,
-										trigger: 'focus',
-										content: this.showDetail(ele.img, ele.title),
-										html: true
-									}
-								)
-							})
-							return (
+				{
+					details && details.map((ele, index) => {
+						return (
+							<div className="about-panel">
+								<div className="detail-img" >
+									<img src={ele.img} />
+								</div>
 								<button id={`popover${index}`} type="button" className="btn" data-placement="top">
 									<i className={`iconfont ${ele.icon}`}></i>
-								</button>)
-						})
-					}
-				</div>
+								</button>
+							</div>
+						)
+					})
+				}
 			</div>
 		);
 	}
