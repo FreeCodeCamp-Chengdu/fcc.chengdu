@@ -25,8 +25,8 @@ class App extends Component {
     console.log(this.props);
     return (
       <div className="App">
-        {/* <Menu /> */}
-         <div>
+        <Menu />
+        <div>
           <Router>
             <div>
               <Route exact path="/" component={Index}></Route>
@@ -35,7 +35,7 @@ class App extends Component {
             </div>
           </Router>
 
-        </div> 
+        </div>
         <Footer />
       </div>
     );

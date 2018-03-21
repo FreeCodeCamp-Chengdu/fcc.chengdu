@@ -1,3 +1,5 @@
+@import '../../../theme.scss';
+
 .index-slogan {
     .MainContent{
         min-height: 770px;
@@ -6,7 +8,54 @@
         border: 1px solid transparent;
       }
       .MainContainer{
-        width: 1282px;
+        width: $contentWidth;
+        max-width: $contentMaxWidth;
         margin: 0 auto;
+      }
+
+      .BannerContainer{
+        align-items: center;
+        color: #fff;
+        position: relative;
+        height: 700px;
+        .SloganContainer{
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          .Slogan{
+            font-size: 30px;
+            margin-bottom: 22px;
+          }
+          .SloganContent{
+            font-size: 23px;
+          }
+          .MainLink{
+            margin-top: 60px;
+            a{
+              color: #fff;
+              display: inline-block;
+              line-height: 44px;
+              padding: 0 30px;
+              margin-right: 10px;
+              border: 1px solid #fff;
+              border-radius: 22px;
+              &:hover{
+                color: darken(#fff,10%);
+                border-color: darken(#fff,10%);
+                text-decoration: none;
+              }
+            }
+            a:hover{
+              background: #fff;
+              color: #7BA2FF;
+            }
+          }
+        }
+        .BannerIcon{
+          position: absolute;
+          right: 0;
+          bottom: -50px;
+        }
       }
 }

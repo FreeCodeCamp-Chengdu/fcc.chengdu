@@ -1,5 +1,5 @@
 .members-block{
-  height: 680px;
+  height: 606px;
   background-color: #fff;
   background-image: url('../../../assets/images/banner2_bg.png');
   background-repeat: no-repeat;
@@ -8,37 +8,32 @@
 }
 .members{
   width: 1280px;
-  height: 860px;
+  height: 810px;
   padding-top: 72px;
   border-radius: 6px;
   margin: 0 auto;
   transform: translateY(-127px);
+  background-image: url('../../../assets/images/banner4_bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: 1029px 532px;
   text-align: center;
   background-color: #fff;
   .title{
     font-size: 20px;
-    line-height: 1;
-    margin-top: 0;
-    font-weight: 700;
-    margin-bottom: 7px;
+    font-weight: bold;
   }
   .sub-title{
     font-size: 20px;
-    line-height: 36px;
-    margin-bottom: 12px;
-    font-weight: 700;
-    line-height: 1;
-    margin-top: 0;
-    color:rgba(0,0,0,0.1);
+    line-height: 20px;
+    margin-bottom: 34px;
+    margin-top: 0px;
+    color: rgba(0,0,0,0.1);
   }
   .members-list{
     padding-top: 46px;
     padding-bottom: 21px;
     text-align: left;
-    background-image: url('../../../assets/images/banner4_bg.png');
-    background-repeat: no-repeat;
-    background-position:top center;
   }
   .card-img-top{
     width: 100%;
@@ -46,13 +41,14 @@
   }
   .member-item{
     display: inline-block;
-    width:220px;
-    height:110px;
+    width: 220px;
+    height: 110px;
     border-radius: 6px;
     padding: 25px 18px 25px 20px;
     font-size: 0;
     margin-right: 44px;
     margin-bottom: 25px;
+    color: #515151;
   }
   .member-item.last-item{
     margin-right: 0;
@@ -73,19 +69,26 @@
     font-size: 12px;
     width: 109px;
     vertical-align: top;
-    margin-top: -20px;
   }
   .name{
     width: 100%;
-    font-weight: 400;
-    font-size:16px;
+    font-weight: bold;
+    font-size: 16px;
     color: #000;
   }
-  .responsibility{
-    color:#515151;
+  .responsibility {
+    font-size: 14px;
+    color: #515151;
   }
-  a:link,a:visited{
+  .GithubLink {
     color:rgba(110,90,208,1);
+    font-size: 12px;
+    line-height: 24px;
+    i {
+      font-size: 14px;
+      margin-right: 2px;
+      color: #aaa;
+    }
   }
   .text-over{
     overflow: hidden;

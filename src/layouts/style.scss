@@ -1,32 +1,35 @@
  @import '../theme.scss';
-// @import '~antd/dist/antd.css';
-// @import '~bootstrap/dist/css/bootstrap.min.css';
 
 body {
   margin: 0;
   padding: 0;
   background-color: $bgColor;
-  font-family: 'Roboto', sans-serif;
 
   /* 整个项目的 */
   .App {
     width: $appWidth;
     height: auto;
-    margin: auto;
 
     /* 菜单 */
     .Menu {
-      position: fixed;
+      position: absolute;
       top: 0px;
       width: 100%;
+      height: $menuHeight;
       background: inherit;
       z-index: 1000;
-      .Nav{
+      .Nav {
+        width: $contentWidth;
+        max-width: $contentMaxWidth;
         display: flex;
         justify-content: space-between;
-        margin-top: 17px;
+        align-items: center;
+        margin: auto;
+        line-height: $menuHeight;
+        img {
+          height: 45px;
+        }
         a{
-          line-height: 45px;
           font-size: 16px;
           color: #fff !important;
           margin-left: 20px;
@@ -40,7 +43,6 @@ body {
         height: auto;
         // min-height: $panelHeight;
         color: $fontColor;
-        // border: solid 1px #006700;
       }
     }
 
@@ -52,13 +54,13 @@ body {
       color: $fontColor;
       .footer-bg{
         height:100%;
-        width: 80%;
-        padding: 75px;
+        width: $contentWidth;
+        max-width: $contentMaxWidth;
+        padding: 115px 0px 75px;
         position: relative;
         margin: auto;
       }
       .left-content {
-        // margin-top: 140px;
         text-align: left;
         img {
           width: 78px;
@@ -71,29 +73,34 @@ body {
         }
       }
       .right-content {
-        // margin-top: 150px;
+        line-height: 85px;
         text-align: right;
+        padding-right: 15px;
       }
       .info {
         position: relative;
         bottom: 0;
         width: 100%;
         height: 60px; 
+        line-height: 60px;
         z-index: 1000;
         background: #0A0A0A;
         margin-left: 0px;
         margin-right: 0px;
-        padding: 0px 10%;
-        p {
-          font-size:12px;
-          font-family:SourceHanSansCN-Regular;
-          color:#545454;
-          margin: 0;
-          &.left{
-            text-align: left;
-          }
-          &.right{
-            text-align: right;
+        .row {
+          width: $contentWidth;
+          max-width: $contentMaxWidth;
+          margin: auto;
+          p {
+            font-size:12px;
+            color:#545454;
+            margin: 0;
+            &.left{
+              text-align: left;
+            }
+            &.right{
+              text-align: right;
+            }
           }
         }
       }
