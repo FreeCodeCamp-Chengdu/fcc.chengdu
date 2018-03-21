@@ -60,7 +60,7 @@ const MEMBERS = [{
   name : '书香墨剑',
   img : yuqi,
   responsibility:'后备开发人员',
-  url: ''
+  url: 'https://github.com/demongodYY'
 },{
   name : '蔡婷',
   img : CaiTing,

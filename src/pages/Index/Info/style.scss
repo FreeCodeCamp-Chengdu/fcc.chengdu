@@ -6,7 +6,7 @@
     .info-row{
         width: $contentWidth;
         max-width: $contentMaxWidth;
-        margin: 34px auto;
+        margin: 10vh auto 0 auto;
         // padding: 0px 5%;
         background: url('../../../assets/images/banner3_bg.png');
         background-size: cover;
@@ -20,7 +20,7 @@
             margin-top: -50px;
         }
         .ImagePanel:nth-child(2){
-            margin-top: 20px;
+            margin-top: 50px;
         }
         .row{
             display: flex;
