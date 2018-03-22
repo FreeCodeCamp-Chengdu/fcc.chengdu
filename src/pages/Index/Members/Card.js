@@ -22,7 +22,11 @@ export default class Index extends Component {
               {detailData.responsibility}
             </div>
             <div className="address text-over">
-              <a className="GithubLink" title={detailData.url}><i className="iconfont icon-github"></i>{detailData.url}</a>
+              <a className="GithubLink" title={detailData.url}>
+                {detailData.urlType === 'user'&&<img className="user-icon" src={detailData.img} alt="头像" />}
+              {detailData.urlType !== 'none'&&<i className={classnames('iconfont',detailData.urlType)}></i>}
+              {detailData.url}
+              </a>
             </div>
           </div>
         </div>
