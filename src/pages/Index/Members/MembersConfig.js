@@ -7,12 +7,12 @@ import Helen from '../../../assets/avatars/Helen-min.jpg';
 import janeZhen from '../../../assets/avatars/janeZhen-min.jpg';
 import lanhao from '../../../assets/avatars/lanhao-min.jpg';
 import liunanbing from '../../../assets/avatars/liunanbing-min.jpg';
-// import qianyu from '../../../assets/avatars/qianyu-min.jpg';
+import qianyu from '../../../assets/avatars/qianyu-min.jpg';
 import qingsong from '../../../assets/avatars/qingsong-min.jpg';
 import shiyao from '../../../assets/avatars/shiyao-min.jpg';
 import Too from '../../../assets/avatars/Too-min.jpg';
 import wangbo from '../../../assets/avatars/wangbo-min.jpg';
-// import wangjie from '../../../assets/avatars/wangjie-min.jpg';
+import wangjie from '../../../assets/avatars/wangjie-min.jpg';
 import xiaoshan from '../../../assets/avatars/xiaoshan-min.jpg';
 import yuqi from '../../../assets/avatars/yuqi-min.jpg';
 
@@ -91,5 +91,15 @@ const MEMBERS = [{
   img : ccbImg,
   responsibility:'技术支持',
   url: 'https://github.com/CanbingChen'
+},{
+  name : '倩玉',
+  img : qianyu,
+  responsibility:'文案',
+  url: ''
+},{
+  name : '王杰',
+  img : wangjie,
+  responsibility:'技术支持',
+  url: 'https://github.com/acherie'
 }];
 export default MEMBERS;
