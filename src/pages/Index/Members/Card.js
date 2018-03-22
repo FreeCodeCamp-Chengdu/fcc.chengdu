@@ -18,11 +18,11 @@ export default class Index extends Component {
             <div className="name text-over">
               {detailData.name}
             </div>
-            <div className="responsibility text-over">
+            <div className="responsibility text-over" title={detailData.responsibility}>
               {detailData.responsibility}
             </div>
             <div className="address text-over">
-              <span className="GithubLink"><i className="iconfont icon-github"></i>{detailData.url}</span>
+              <a className="GithubLink" title={detailData.url}><i className="iconfont icon-github"></i>{detailData.url}</a>
             </div>
           </div>
         </div>
