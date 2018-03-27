@@ -24,9 +24,11 @@ class Index extends Component {
             a11y: true, // 无障碍
             autoplay: true,
             slidesPerView: 'auto',
+            loopedSlides: this.state.eventLists.length,
             centeredSlides: false,
-            spaceBetween: 20,
-            loop : true,
+            slidesPerGroup: 1,
+            spaceBetween: 65,
+            loop: true,
             navigation: {
                 nextEl: '#swiper-button-next',
                 prevEl: '#swiper-button-prev',
@@ -36,45 +38,56 @@ class Index extends Component {
             // }
         });
     }
+    
+    setMarginLeft() {
+        let bodyWidth = document.body.clientWidth;
+        let panelWidt = document.getElementById("index-events").clientWidth;
+        document.getElementsByClassName("content-events").marginRight = (panelWidt - bodyWidth) / 2 + 'px';
+    }
 
     render() {
+      
         return (
             <div className="Panel index-events">
-                {/* 标题 */}
-                <div className="title-panel">
-                    <div>社区大事件</div>
-                    <div className="preloader">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-                <div className="title-panel-bg">
-                    <p>Big</p>
-                    <p>even</p>
-                </div>
-
-                <div className="content-events">
-                    <div className="events-slider">
-                        <i id="swiper-button-prev" className="iconfont icon-jiantou1-copy-copy-copy"></i>
-                        <i id="swiper-button-next" className="iconfont icon-jiantou1-copy"></i>
-                        <div className="swiper-container">
-                            <div className="swiper-wrapper slider-content" style={{ width: Events.length * 455 }}>
-                                {
-                                    Events && Events.events.map((item, index) => {
-                                        return (
-                                            <div className="swiper-slide event-panel">
-                                                <div className="">
-                                                    <img src={require(`../../../assets/events/${item.url}`)} />
-                                                    <p>{item.title}</p>
-                                                </div>
-                                            </div>
-                                        )
-                                    })
-                                }
+                <div className="MainContainer" id="index-events">
+                    {/* 标题 */}
+                    <div className="TitleRow">
+                        <div className="title-panel">
+                            <strong>社区大事件</strong>
+                            <div className="preloader">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </div>
-                            {/* <div class="swiper-scrollbar"></div> */}
+                        </div>
+                        <div className="title-panel-bg">
+                            <p>Big</p>
+                            <p>even</p>
+                        </div>
+                    </div>
+
+                    <div className="content-events">
+                        <div className="events-slider">
+                            <i id="swiper-button-prev" className="iconfont icon-jiantou1-copy-copy-copy"></i>
+                            <i id="swiper-button-next" className="iconfont icon-jiantou1-copy"></i>
+                            <div className="swiper-container">
+                                <div className="swiper-wrapper slider-content" style={{ width: Events.length * 455 }}>
+                                    {
+                                        Events && Events.events.map((item, index) => {
+                                            return (
+                                                <div className="swiper-slide event-panel">
+                                                    <div className="">
+                                                        <img src={require(`../../../assets/events/${item.url}`)} />
+                                                        <p>{item.title}</p>
+                                                    </div>
+                                                </div>
+                                            )
+                                        })
+                                    }
+                                </div>
+                                {/* <div class="swiper-scrollbar"></div> */}
+                            </div>
                         </div>
                     </div>
                 </div>
