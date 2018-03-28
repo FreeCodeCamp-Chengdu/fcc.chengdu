@@ -15,13 +15,18 @@ class Events extends Component {
             '1': 'left',
             '-1': 'right',
         };
+        let list = [];
         let initPos = -1;
         for (let k in eventList) {
             let s = eventList[k].time.split('');
             initPos *= -1;
             eventList[k].pos = pos[`${initPos}`];
             eventList[k].date = `${s[2]}${s[3]}年${s[4] || ''}${s[5]}月${s[6] || ''}${s[7]}日`;
+            list.unshift(eventList[k]);
         }
+        this.state = {
+            list
+        };
     }
 
     componentDidMount(){
@@ -42,7 +47,7 @@ class Events extends Component {
                         <div className="VivaTimeline">
                             <dl>
                                 {
-                                    eventList.map((item, index) => {
+                                    this.state.list.map((item, index) => {
                                         return <div key={`event-panel-${index}`} >
 
                                             <dd className={`pos-${item.pos} clearfix`}>
@@ -53,7 +58,7 @@ class Events extends Component {
                                                     <div className="events-body">
                                                         <div className="">
                                                             <div className="col-md-6 pull-left">
-                                                                <img className="events-object img-responsive img-rounded" src={`${item.imageList[0].url}`} />
+                                                                <img alt={`${item.title}`} className="events-object img-responsive img-rounded" src={`${item.imageList[0].url}`} />
                                                             </div>
                                                             <div className="events-desc">
                                                                 {item.describe}
