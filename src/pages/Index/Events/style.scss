@@ -12,6 +12,7 @@ $titlePanelWidth: 200px;
     .MainContainer {
         width: $contentWidth;
         max-width: $contentMaxWidth;
+        overflow: hidden;
         margin: auto;
         .TitleRow {
             position: relative;

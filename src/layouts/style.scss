@@ -108,3 +108,17 @@ body {
   }  
 }
 
+@media (max-width: 992px) {
+  body{
+    .App{
+      .Footer{
+        .left-content{
+          text-align: center;
+        }
+        .right-content{
+          text-align: center;
+        }
+      }
+    }
+  }
+}

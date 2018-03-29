@@ -45,3 +45,12 @@
         }
     }
 }
+@media (max-width: 992px) {
+    .index-info{
+        .info-row{
+            .ImagePanel{
+                display: none;
+            }
+        }
+    }
+}
