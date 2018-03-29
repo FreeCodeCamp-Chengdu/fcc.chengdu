@@ -12,7 +12,6 @@ $titlePanelWidth: 200px;
     .MainContainer {
         width: $contentWidth;
         max-width: $contentMaxWidth;
-        overflow: hidden;
         margin: auto;
         .TitleRow {
             position: relative;
@@ -138,6 +137,13 @@ $titlePanelWidth: 200px;
                     }
                 }
             }
+        }
+    }
+}
+@media(max-width:992px){
+    .index-events{
+        .MainContainer{
+            overflow: hidden;
         }
     }
 }
