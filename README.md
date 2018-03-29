@@ -1,3 +1,5 @@
+![Certification](http://fcc.lanhao.name/fcc-readme-icon/FreeCodeCamp-Chengdu/fcc.chengdu?_v=0.1.0)
+
 ### FCC成都社区官网项目
 
 #### 技术栈
