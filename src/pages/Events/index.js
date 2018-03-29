@@ -3,34 +3,76 @@
  * @author 
 */
 import './style.css';
+
 import React, { Component } from 'react';
 
 import * as eventList from './index.json';
 
 class Events extends Component {
+    constructor() {
+        super();
+        let pos = {
+            '1': 'left',
+            '-1': 'right',
+        };
+        let list = [];
+        let initPos = -1;
+        for (let k in eventList) {
+            let s = eventList[k].time.split('');
+            initPos *= -1;
+            eventList[k].pos = pos[`${initPos}`];
+            eventList[k].date = `${s[2]}${s[3]}年${s[4] || ''}${s[5]}月${s[6] || ''}${s[7]}日`;
+            list.unshift(eventList[k]);
+        }
+        this.state = {
+            list
+        };
+    }
+
+    componentDidMount(){
+        window.$(document).ready(function () {
+            window.$('.VivaTimeline').vivaTimeline({
+                carousel: true,
+                carouselTime: 3000
+            });
+        })
+    }
+
     render() {
         return (
-            <div className="Panel events">
-                <h4>历史活动</h4>
-                <div className="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    {
-                        eventList.map((item, index) => {
-                            return <div key={`event-panel-${index}`} className="panel panel-info">
-                                <div className="panel-heading" role="tab" id={`heading${index}`}>
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href={`#collapseOne${index}`} aria-expanded="false" aria-controls={`collapseOne${index}`} >
-                                        {`${index}: ${item.title}`}
-                                    </a>
-                                </div>
-                                <div id={`collapseOne${index}`} className="panel-collapse collapse" role="tabpanel" aria-labelledby={`heading${index}`}>
-                                    <div className="panel-body">
-                                        <p>时间：{item.time}</p>
-                                        <p>地址：{item.address}</p>
-                                        <p>描述：{item.describe}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        })
-                    }
+            <div className="container">
+                <link rel="stylesheet" type="text/css" href="css/jquery.eeyellow.Timeline.css" />
+                <div className="row">
+                    <div className="col-md-12">
+                        <div className="VivaTimeline">
+                            <dl>
+                                {
+                                    this.state.list.map((item, index) => {
+                                        return <div key={`event-panel-${index}`} >
+
+                                            <dd className={`pos-${item.pos} clearfix`}>
+                                                <div className="circ"></div>
+                                                <div className="time">{item.date}</div>
+                                                <div className="events">
+                                                    <div className="events-header">{item.type} - {item.title}</div>
+                                                    <div className="events-body">
+                                                        <div className="">
+                                                            <div className="col-md-6 pull-left">
+                                                                <img alt={`${item.title}`} className="events-object img-responsive img-rounded" src={`${item.imageList[0].url}`} />
+                                                            </div>
+                                                            <div className="events-desc">
+                                                                {item.describe}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </dd>
+                                        </div>
+                                    })
+                                }
+                            </dl>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
