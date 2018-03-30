@@ -52,7 +52,25 @@
                 display: none;
             }
             .col-md-7{
-                width: 66.66666667%;
+                width: 80%;
+            }
+            .col-md-8{
+                width: 80%;
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    .index-info{
+        .info-row{
+            .ImagePanel{
+                display: none;
+            }
+            .col-md-7{
+                width: 90%;
+            }
+            .col-md-8{
+                width: 90%;
             }
         }
     }
