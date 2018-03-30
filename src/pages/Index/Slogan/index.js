@@ -21,7 +21,7 @@ class Index extends Component {
                                 立即前往线上学习平台
                             </div>
                             <div className="MainLink">
-                                <a href="http://www.freecodecamp.org/" target="_blank">
+                                <a href="http://www.freecodecamp.cn/" target="_blank">
                                     中文版
                                 </a>
                                 <a href="http://www.freecodecamp.com/" target="_blank">
