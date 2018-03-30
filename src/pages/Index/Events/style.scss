@@ -140,3 +140,10 @@ $titlePanelWidth: 200px;
         }
     }
 }
+@media(max-width:992px){
+    .index-events{
+        .MainContainer{
+            overflow: hidden;
+        }
+    }
+}

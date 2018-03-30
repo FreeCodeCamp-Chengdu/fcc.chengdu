@@ -59,3 +59,15 @@
         }
       }
 }
+@media (max-width: 992px) {
+  .index-slogan{
+    .BannerContainer{
+      .SloganContainer{
+        word-wrap: break-word;
+      }
+      .BannerIcon{
+        display: none;
+      }
+    }
+  }
+}
