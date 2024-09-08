@@ -40,8 +40,8 @@ class Menu extends Component {
           <img src={logo} />
           <div>
             <a href="/events">历史活动</a>
-            <a href="https://web-conf.tk/" target="_blank">前端大会</a>
-            <a href="https://git-dev.leanapp.cn/" target="_blank">code for city</a>
+            <a href="https://web-conf.dev/" target="_blank">前端大会</a>
+            <a href="https://web-conf.dev/#2018/Code4City/" target="_blank">code for city</a>
           </div>
 
         </div>

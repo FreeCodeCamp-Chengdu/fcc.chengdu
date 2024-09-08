@@ -5,7 +5,7 @@
 
 import React, { Component } from 'react';
 import details from './data'
-import './style.css';
+import './style.scss';
 
 class Index extends Component {
 	render() {

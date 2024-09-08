@@ -2,12 +2,15 @@
 
 # dependencies
 /node_modules
+package-lock.json
 
 # testing
 /coverage
 
 # production
 /build
+.parcel-cache/
+dist/
 
 # misc
 .DS_Store

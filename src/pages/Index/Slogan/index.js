@@ -2,7 +2,7 @@
  * @desc 宗旨、理念
  * @author 
  */
-import './style.css';
+import './style.scss';
 import React, { Component } from 'react';
 import bannerIcon from '../../../assets/images/banner-icon.png';
 
@@ -21,10 +21,10 @@ class Index extends Component {
                                 立即前往线上学习平台
                             </div>
                             <div className="MainLink">
-                                <a href="http://www.freecodecamp.org/" target="_blank">
+                                <a href="https://www.freecodecamp.org/chinese/" target="_blank">
                                     中文版
                                 </a>
-                                <a href="http://www.freecodecamp.com/" target="_blank">
+                                <a href="https://www.freecodecamp.org/" target="_blank">
                                     English version
                                 </a>
                             </div>

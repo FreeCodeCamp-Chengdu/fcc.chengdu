@@ -2,7 +2,7 @@
  * @desc 历史活动页面
  * @author 
 */
-import './style.css';
+import './style.scss';
 
 import React, { Component } from 'react';
 
