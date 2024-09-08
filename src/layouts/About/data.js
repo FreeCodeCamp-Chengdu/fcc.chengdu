@@ -1,5 +1,5 @@
-import qrWechat from '../../assets/images/qr-wechat.png';
-import qrQq from '../../assets/images/qr-qq.png';
+import qrWechat from '../../assets/images/qr-wechat.jpg';
+import qrQq from '../../assets/images/qr-qq.jpg';
 import qrWeibo from '../../assets/images/qr-weibo.png';
 import qrGithub from '../../assets/images/qr-github.png';
 
