@@ -2,7 +2,7 @@
  * @desc 社区介绍板块
  * @author 
  */
-import './style.css';
+import './style.scss';
 import React, { Component } from 'react';
 
 class Index extends Component {

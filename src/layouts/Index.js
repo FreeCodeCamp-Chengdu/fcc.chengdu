@@ -2,7 +2,7 @@
  * @desc 页面结构
  * @author
  */
-import './style.css';
+import './style.scss';
 import React, { Component } from 'react';
 import { Route, BrowserRouter as Router } from 'react-router-dom'
 // 页面框架

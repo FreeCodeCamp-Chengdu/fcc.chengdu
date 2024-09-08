@@ -3,7 +3,7 @@
  * @author
  */
 import React, {Component} from 'react';
-import './style.css';
+import './style.scss';
 import Card from './Card';
 import MEMBERS from './MembersConfig'
 class Index extends Component {
