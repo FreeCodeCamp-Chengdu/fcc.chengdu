@@ -7,23 +7,16 @@ import React, { Component } from 'react';
 
 import { events } from './events';
 
-class Index extends Component {
-    constructor() {
-        super();
-        this.state = {
-            eventLists: events
-        };
-    }
-
+export class Events extends Component {
     componentDidMount() {
-        var mySwiper = new window.Swiper('.swiper-container', {
+        new window.Swiper('.swiper-container', {
             grabCursor: true,
             setWrapperSize: true,
             roundLengths: true,
             a11y: true, // 无障碍
             autoplay: true,
             slidesPerView: 'auto',
-            loopedSlides: this.state.eventLists.length,
+            loopedSlides: events.length,
             centeredSlides: false,
             slidesPerGroup: 1,
             spaceBetween: 65,
@@ -39,10 +32,11 @@ class Index extends Component {
     }
 
     setMarginLeft() {
-        let bodyWidth = document.body.clientWidth;
-        let panelWidt = document.getElementById('index-events').clientWidth;
-        document.getElementsByClassName('content-events').marginRight =
-            (panelWidt - bodyWidth) / 2 + 'px';
+        const bodyWidth = document.body.clientWidth,
+            panelWidth = document.querySelector('#index-events').clientWidth;
+
+        document.querySelector('.content-events').marginRight =
+            (panelWidth - bodyWidth) / 2 + 'px';
     }
 
     render() {
@@ -54,10 +48,10 @@ class Index extends Component {
                         <div className="title-panel">
                             <strong>社区大事件</strong>
                             <div className="preloader">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                                <span />
+                                <span />
+                                <span />
+                                <span />
                             </div>
                         </div>
                         <div className="title-panel-bg">
@@ -82,7 +76,10 @@ class Index extends Component {
                                     style={{ width: events.length * 455 }}
                                 >
                                     {events.map(({ title, url }) => (
-                                        <div className="swiper-slide event-panel">
+                                        <div
+                                            key={url}
+                                            className="swiper-slide event-panel"
+                                        >
                                             <div>
                                                 <img src={url} />
                                                 <p>{title}</p>
@@ -99,5 +96,3 @@ class Index extends Component {
         );
     }
 }
-
-export default Index;
