@@ -1,0 +1,26 @@
+name: CI & CD
+on:
+    push:
+        branches:
+            - master
+jobs:
+    Build-and-Deploy:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+                  cache: yarn
+            - name: Install & Build
+              run: yarn  &&  yarn build
+
+            - name: Update document
+              uses: peaceiris/actions-gh-pages@v4
+              with:
+                  publish_dir: ./docs
+                  personal_token: ${{ secrets.GITHUB_TOKEN }}
+                  force_orphan: true
