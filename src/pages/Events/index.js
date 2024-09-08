@@ -2,32 +2,29 @@
  * @desc 历史活动页面
  * @author
  */
-import './style.scss';
+import '../../theme.scss';
 
 import React, { Component } from 'react';
 
-import * as eventList from './index.json';
+import eventList from './index.json';
 
-class Events extends Component {
+export class Events extends Component {
     constructor() {
         super();
-        let pos = {
-            1: 'left',
-            '-1': 'right'
-        };
-        let list = [];
+
+        const pos = { 1: 'left', '-1': 'right' },
+            list = [];
         let initPos = -1;
-        for (let k in eventList) {
-            let s = eventList[k].time.split('');
-            initPos *= -1;
-            eventList[k].pos = pos[`${initPos}`];
-            eventList[k].date =
-                `${s[2]}${s[3]}年${s[4] || ''}${s[5]}月${s[6] || ''}${s[7]}日`;
-            list.unshift(eventList[k]);
+
+        for (const event of eventList) {
+            const s = event.time;
+
+            event.pos = pos[(initPos *= -1)];
+            event.date = `${s.slice(0, 4)}年${+s.slice(4, 6)}月${+s.slice(6)}日`;
+
+            list.unshift(event);
         }
-        this.state = {
-            list
-        };
+        this.state = { list };
     }
 
     componentDidMount() {
@@ -40,10 +37,6 @@ class Events extends Component {
     render() {
         return (
             <div className="container">
-                <link
-                    rel="stylesheet"
-                    href="css/jquery.eeyellow.Timeline.css"
-                />
                 <div className="row">
                     <div className="col-md-12">
                         <div className="VivaTimeline">
@@ -87,5 +80,3 @@ class Events extends Component {
         );
     }
 }
-
-export default Events;

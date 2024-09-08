@@ -14,12 +14,12 @@ importers:
       '@fortawesome/fontawesome-free-brands':
         specifier: ^5.0.6
         version: 5.0.13
-      '@fortawesome/react-fontawesome':
-        specifier: ^0.0.17
-        version: 0.0.17(@fortawesome/fontawesome@1.1.8)(prop-types@15.8.1)(react@16.14.0)
       classnames:
         specifier: ^2.2.5
         version: 2.5.1
+      eeyellow.timeline:
+        specifier: github:eeyellow/eeyellow.Timeline
+        version: https://codeload.github.com/eeyellow/eeyellow.Timeline/tar.gz/fe63219f09e6ef3ff5e799ccc6684bc57e11d126
       react:
         specifier: ^16.2.0
         version: 16.14.0
@@ -658,13 +658,6 @@ packages:
     resolution: {integrity: sha512-c0/MtkPVT0fmiFcCyYoPjkG9PkMOvfrZw2+0BaJ+Rh6UEcK1AR/LaRgrHHjUkbAbs9LXxQJhFS8CJ4uSnK2+JA==}
     engines: {node: '>=6'}
     deprecated: This package is deprecated. See https://git.io/fNCzJ for information about upgrading.
-
-  '@fortawesome/react-fontawesome@0.0.17':
-    resolution: {integrity: sha512-LpTGKuSVSMGzoKLph+d6l6rupPw17D1zX/dQYkryGdat9I76kwQwMYcn7ZviDDT6rTBlrdftB/1GIRvMSyPFuA==}
-    peerDependencies:
-      '@fortawesome/fontawesome': '>=1.1.0'
-      prop-types: ^15.5.10
-      react: ^16.0.0
 
   '@jridgewell/gen-mapping@0.3.5':
     resolution: {integrity: sha512-IzL8ZoEDIBRWEzlCcRhOaCupYyN5gdIK+Q6fbFdPDg6HqX6jpkItn7DFIpW9LQzXG6Df9sA7+OKnq0qlz/GaQg==}
@@ -1342,6 +1335,10 @@ packages:
   boolbase@1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
 
+  bootstrap@3.4.1:
+    resolution: {integrity: sha512-yN5oZVmRCwe5aKwzRj6736nSmKDX7pLYwsXiCj/EYmo16hODaBiT4En5btW/jhBF/seV+XMx3aYwukYC3A49DA==}
+    engines: {node: '>=6'}
+
   boxen@4.2.0:
     resolution: {integrity: sha512-eB4uT9RGzg2odpER62bBwSLvUeGC+WbRjjyyFhGsKnc8wp/m0+hQsMUvUe3H2V0D5vw0nBdO1hCJoZo5mKeuIQ==}
     engines: {node: '>=8'}
@@ -1628,6 +1625,10 @@ packages:
 
   duplexer3@0.1.5:
     resolution: {integrity: sha512-1A8za6ws41LQgv9HrE/66jyC5yuSjQ3L/KOpFtoBilsAK2iA2wuS5rTt1OCzIvtS2V7nVmedsUU+DGRcjBmOYA==}
+
+  eeyellow.timeline@https://codeload.github.com/eeyellow/eeyellow.Timeline/tar.gz/fe63219f09e6ef3ff5e799ccc6684bc57e11d126:
+    resolution: {tarball: https://codeload.github.com/eeyellow/eeyellow.Timeline/tar.gz/fe63219f09e6ef3ff5e799ccc6684bc57e11d126}
+    version: 1.0.0
 
   ejs@3.1.10:
     resolution: {integrity: sha512-UeJmFfOrAQS8OJWPZ4qtgHyWExa088/MtK5UEyoJGFH67cDEXkZSviOiKRCZ4Xij0zxI3JECgYs3oKx+AizQBA==}
@@ -1928,9 +1929,6 @@ packages:
     resolution: {integrity: sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==}
     engines: {node: '>=16.17.0'}
 
-  humps@2.0.1:
-    resolution: {integrity: sha512-E0eIbrFWUhwfXJmsbdjRQFQPrl5pTEoKlz163j1mTqqUnU9PgR4AgB8AIITzuB3vLBdxZXyZ9TDIrwB2OASz4g==}
-
   husky@9.1.5:
     resolution: {integrity: sha512-rowAVRUBfI0b4+niA4SJMhfQwc107VLkBUgEYYAOQAbqDCnra1nYh83hF/MDmhYs9t9n1E3DuKOrs2LYNC+0Ag==}
     engines: {node: '>=18'}
@@ -2155,6 +2153,9 @@ packages:
     resolution: {integrity: sha512-2P4SQ0HrLQ+fw6llpLnOaGAvN2Zu6778SJMrCUwns4fOoG9ayrTiZk3VV8sCPkVZF8ab0zksVpS8FDY5pRCNBA==}
     engines: {node: '>=10'}
     hasBin: true
+
+  jquery@3.7.1:
+    resolution: {integrity: sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==}
 
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -4003,13 +4004,6 @@ snapshots:
     dependencies:
       '@fortawesome/fontawesome-common-types': 0.1.7
 
-  '@fortawesome/react-fontawesome@0.0.17(@fortawesome/fontawesome@1.1.8)(prop-types@15.8.1)(react@16.14.0)':
-    dependencies:
-      '@fortawesome/fontawesome': 1.1.8
-      humps: 2.0.1
-      prop-types: 15.8.1
-      react: 16.14.0
-
   '@jridgewell/gen-mapping@0.3.5':
     dependencies:
       '@jridgewell/set-array': 1.2.1
@@ -4943,6 +4937,8 @@ snapshots:
 
   boolbase@1.0.0: {}
 
+  bootstrap@3.4.1: {}
+
   boxen@4.2.0:
     dependencies:
       ansi-align: 3.0.1
@@ -5237,6 +5233,11 @@ snapshots:
   dotenv@7.0.0: {}
 
   duplexer3@0.1.5: {}
+
+  eeyellow.timeline@https://codeload.github.com/eeyellow/eeyellow.Timeline/tar.gz/fe63219f09e6ef3ff5e799ccc6684bc57e11d126:
+    dependencies:
+      bootstrap: 3.4.1
+      jquery: 3.7.1
 
   ejs@3.1.10:
     dependencies:
@@ -5562,8 +5563,6 @@ snapshots:
 
   human-signals@5.0.0: {}
 
-  humps@2.0.1: {}
-
   husky@9.1.5: {}
 
   iconv-lite@0.4.24:
@@ -5758,6 +5757,8 @@ snapshots:
       chalk: 4.1.2
       filelist: 1.0.4
       minimatch: 3.1.2
+
+  jquery@3.7.1: {}
 
   js-tokens@4.0.0: {}
 
