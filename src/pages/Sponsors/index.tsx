@@ -2,7 +2,6 @@
  * @desc 历史活动页面
  * @author
  */
-import React, { Component } from 'react';
 import sponsors from './data';
 import './style.css';
 

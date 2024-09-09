@@ -1,5 +1,4 @@
 import classnames from 'classnames';
-import React from 'react';
 
 export const Card = ({ url, img, name, responsibility, urlType, index }) => (
     <div
@@ -18,7 +17,12 @@ export const Card = ({ url, img, name, responsibility, urlType, index }) => (
                     {responsibility}
                 </div>
                 <div className="address text-over">
-                    <a className="GithubLink" title={url}>
+                    <a
+                        className="GithubLink"
+                        title={url}
+                        href={url}
+                        target="_blank"
+                    >
                         {urlType === 'user' && (
                             <img className="user-icon" src={img} alt="头像" />
                         )}

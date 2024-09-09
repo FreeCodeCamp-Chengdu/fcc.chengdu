@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 import logo from '../assets/images/fcc-logo.png';
 

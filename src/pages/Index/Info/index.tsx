@@ -3,9 +3,8 @@
  * @author
  */
 import './style.scss';
-import React, { Component } from 'react';
 
-const info1 = new URL('../../../assets/images/info1.png', import.meta.url);
+const info1 = new URL('../../../assets/images/info1.png', import.meta.url) + '';
 
 export const Info = () => (
     <div className="Panel index-info">

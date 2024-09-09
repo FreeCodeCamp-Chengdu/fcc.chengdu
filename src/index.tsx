@@ -1,5 +1,4 @@
-import React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { serviceWorkerUpdate } from 'web-utility';
 
 import { App } from './layouts/Index';
@@ -18,4 +17,4 @@ if (NODE_ENV !== 'development')
 
 serviceWorker?.addEventListener('controllerchange', () => location.reload());
 
-render(<App />, document.getElementById('root'));
+createRoot(document.getElementById('root')).render(<App />);

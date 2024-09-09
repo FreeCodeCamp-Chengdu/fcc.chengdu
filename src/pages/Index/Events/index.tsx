@@ -2,14 +2,19 @@
  * @desc 大事件记录、展示板块
  * @author
  */
-import './style.scss';
-import React, { Component } from 'react';
+import { Component } from 'react';
+import { Constructor } from 'web-utility';
 
 import { events } from './events';
+import './style.scss';
+
+declare global {
+    const Swiper: Constructor<any>;
+}
 
 export class Events extends Component {
     componentDidMount() {
-        new window.Swiper('.swiper-container', {
+        new Swiper('.swiper-container', {
             grabCursor: true,
             setWrapperSize: true,
             roundLengths: true,
@@ -33,10 +38,11 @@ export class Events extends Component {
 
     setMarginLeft() {
         const bodyWidth = document.body.clientWidth,
-            panelWidth = document.querySelector('#index-events').clientWidth;
+            panelWidth = document.querySelector('#index-events')!.clientWidth;
 
-        document.querySelector('.content-events').marginRight =
-            (panelWidth - bodyWidth) / 2 + 'px';
+        document.querySelector<HTMLElement>(
+            '.content-events'
+        )!.style.marginRight = (panelWidth - bodyWidth) / 2 + 'px';
     }
 
     render() {
@@ -77,11 +83,11 @@ export class Events extends Component {
                                 >
                                     {events.map(({ title, url }) => (
                                         <div
-                                            key={url}
+                                            key={url + ''}
                                             className="swiper-slide event-panel"
                                         >
                                             <div>
-                                                <img src={url} />
+                                                <img src={url + ''} />
                                                 <p>{title}</p>
                                             </div>
                                         </div>

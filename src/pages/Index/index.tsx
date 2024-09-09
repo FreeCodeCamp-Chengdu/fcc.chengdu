@@ -1,5 +1,3 @@
-import React, { Component } from 'react';
-
 import { Slogan } from './Slogan';
 import { Info } from './Info';
 import { Events } from './Events';

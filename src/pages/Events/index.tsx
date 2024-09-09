@@ -4,31 +4,38 @@
  */
 import '../../theme.scss';
 
-import React, { Component } from 'react';
+import type {} from 'jquery';
+import { Component } from 'react';
 
 import eventList from './index.json';
 
-export class Events extends Component {
-    constructor() {
-        super();
-
-        const pos = { 1: 'left', '-1': 'right' },
-            list = [];
-        let initPos = -1;
-
-        for (const event of eventList) {
-            const s = event.time;
-
-            event.pos = pos[(initPos *= -1)];
-            event.date = `${s.slice(0, 4)}年${+s.slice(4, 6)}月${+s.slice(6)}日`;
-
-            list.unshift(event);
-        }
-        this.state = { list };
+declare global {
+    interface JQuery {
+        vivaTimeline: (options: object) => JQuery;
     }
+}
+type EventItem = (typeof eventList)[0] & {
+    pos: 'left' | 'right';
+    date: string;
+};
 
+const pos = { 1: 'left', '-1': 'right' },
+    list: EventItem[] = [];
+let initPos = -1;
+
+for (const event of eventList) {
+    const s = event.time;
+
+    list.unshift({
+        ...event,
+        pos: pos[(initPos *= -1)],
+        date: `${s.slice(0, 4)}年${+s.slice(4, 6)}月${+s.slice(6)}日`
+    });
+}
+
+export class Events extends Component {
     componentDidMount() {
-        window.$('.VivaTimeline').vivaTimeline({
+        $('.VivaTimeline').vivaTimeline({
             carousel: true,
             carouselTime: 3000
         });
@@ -41,7 +48,7 @@ export class Events extends Component {
                     <div className="col-md-12">
                         <div className="VivaTimeline">
                             <dl>
-                                {this.state.list.map((item, index) => (
+                                {list.map((item, index) => (
                                     <div key={`event-panel-${index}`}>
                                         <dd
                                             className={`pos-${item.pos} clearfix`}
