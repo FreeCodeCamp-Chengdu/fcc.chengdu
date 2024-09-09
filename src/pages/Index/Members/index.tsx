@@ -2,7 +2,7 @@
  * @desc 社区组织者板块
  * @author
  */
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 import './style.scss';
 import { Card } from './Card';

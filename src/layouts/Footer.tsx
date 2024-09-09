@@ -1,5 +1,3 @@
-import React, { Component } from 'react';
-
 import { About } from './About';
 import FLogo from '../assets/images/fcc-logo.png';
 

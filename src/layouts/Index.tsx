@@ -3,8 +3,7 @@
  * @author
  */
 import './style.scss';
-import React from 'react';
-import { Route, HashRouter as Router } from 'react-router-dom';
+import { Route, HashRouter as Router, Routes } from 'react-router-dom';
 // 页面框架
 import { Menu } from './Menu';
 import { Footer } from './Footer';
@@ -24,11 +23,11 @@ export const App = () => (
         <Menu />
         <div>
             <Router>
-                <div>
-                    <Route exact path="/" component={Index}></Route>
-                    <Route path="/events" component={Events}></Route>
-                    <Route path="/sponsors" component={Sponsors}></Route>
-                </div>
+                <Routes>
+                    <Route path="/" element={<Index />} />
+                    <Route path="/events" element={<Events />} />
+                    <Route path="/sponsors" element={<Sponsors />} />
+                </Routes>
             </Router>
         </div>
         <Footer />

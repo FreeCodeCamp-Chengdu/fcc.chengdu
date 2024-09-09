@@ -3,8 +3,6 @@
  * @author
  */
 
-import React from 'react';
-
 import details from './data';
 import './style.scss';
 

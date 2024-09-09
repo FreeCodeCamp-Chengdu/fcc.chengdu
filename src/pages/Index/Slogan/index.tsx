@@ -2,7 +2,6 @@
  * @desc 宗旨、理念
  * @author
  */
-import React, { Component } from 'react';
 
 import './style.scss';
 import bannerIcon from '../../../assets/images/banner-icon.png';
