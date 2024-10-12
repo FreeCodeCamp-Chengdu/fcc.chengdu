@@ -8,6 +8,7 @@
         "classnames": "^2.5.1",
         "eeyellow.timeline": "github:eeyellow/eeyellow.Timeline",
         "react": "^18.3.1",
+        "react-chrono": "^2.6.1",
         "react-dom": "^18.3.1",
         "react-router-dom": "^6.26.1",
         "web-utility": "^4.4.0"
