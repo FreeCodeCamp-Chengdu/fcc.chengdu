@@ -53,5 +53,8 @@
     "lint-staged": {
         "*.{html,md,scss,json,yml,js,jsx,ts,tsx}": "prettier --write"
     },
-    "browserslist": "> 0.5%, last 2 versions, not dead, IE 11"
+    "browserslist": "> 0.5%, last 2 versions, not dead, IE 11",
+    "@parcel/resolver-default": {
+        "packageExports": true
+    }
 }
