@@ -20,18 +20,15 @@ const list: EventItem[] = eventList
     }))
     .reverse();
 
-const items = list.map(item => ({
-    title: item.date,
-    cardTitle: `${item.type} - ${item.title}`,
-    cardSubtitle: item.describe,
-    cardDetailedText: item.describe,
-    media: {
-        type: 'IMAGE',
-        source: {
-            url: item.imageList[0]?.url || ''
-        }
-    }
-}));
+const items = list.map(
+    ({ type, title, date, describe, imageList: [{ url = '' } = {}] }) => ({
+        title: date,
+        cardTitle: `${type} - ${title}`,
+        cardSubtitle: describe,
+        cardDetailedText: describe,
+        media: { type: 'IMAGE', source: { url } }
+    })
+);
 
 export const Events: React.FC = () => {
     return (
