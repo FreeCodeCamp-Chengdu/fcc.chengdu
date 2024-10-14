@@ -4,7 +4,9 @@
  */
 import '../../theme.scss';
 
+import { FC } from 'react';
 import { Chrono } from 'react-chrono';
+import { Container, Row, Col } from 'react-bootstrap';
 
 import eventList from './index.json';
 
@@ -29,11 +31,11 @@ const items = list.map(
     })
 );
 
-export const Events: React.FC = () => {
+export const Events: FC = () => {
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col-md-12">
+        <Container>
+            <Row>
+                <Col md={12}>
                     <Chrono
                         items={items}
                         mode="VERTICAL_ALTERNATING"
@@ -53,19 +55,11 @@ export const Events: React.FC = () => {
                             cardText: '0.9rem',
                             title: '1rem'
                         }}
-                        classNames={{
-                            card: 'my-card',
-                            cardMedia: 'my-card-media',
-                            cardSubTitle: 'my-card-subtitle',
-                            cardText: 'my-card-text',
-                            cardTitle: 'my-card-title',
-                            title: 'my-title'
-                        }}
                         timelinePointShape="circle"
                         lineWidth={3}
                     />
-                </div>
-            </div>
-        </div>
+                </Col>
+            </Row>
+        </Container>
     );
 };
