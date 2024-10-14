@@ -31,35 +31,33 @@ const items = list.map(
     })
 );
 
-export const Events: FC = () => {
-    return (
-        <Container>
-            <Row>
-                <Col md={12}>
-                    <Chrono
-                        items={items}
-                        mode="VERTICAL_ALTERNATING"
-                        cardHeight={200}
-                        slideShow
-                        slideItemDuration={3000}
-                        theme={{
-                            primary: '#0077B6',
-                            secondary: '#48CAE4',
-                            cardBgColor: '#CAF0F8',
-                            cardForeColor: '#03045E',
-                            titleColor: '#023E8A'
-                        }}
-                        fontSizes={{
-                            cardTitle: '1.3rem',
-                            cardSubtitle: '1rem',
-                            cardText: '0.9rem',
-                            title: '1rem'
-                        }}
-                        timelinePointShape="circle"
-                        lineWidth={3}
-                    />
-                </Col>
-            </Row>
-        </Container>
-    );
-};
+export const Events: FC = () => (
+    <Container>
+        <Row>
+            <Col md={12}>
+                <Chrono
+                    items={items}
+                    mode="VERTICAL_ALTERNATING"
+                    cardHeight={200}
+                    slideShow
+                    slideItemDuration={3000}
+                    theme={{
+                        primary: '#0077B6',
+                        secondary: '#48CAE4',
+                        cardBgColor: '#CAF0F8',
+                        cardForeColor: '#03045E',
+                        titleColor: '#023E8A'
+                    }}
+                    fontSizes={{
+                        cardTitle: '1.3rem',
+                        cardSubtitle: '1rem',
+                        cardText: '0.9rem',
+                        title: '1rem'
+                    }}
+                    timelinePointShape="circle"
+                    lineWidth={3}
+                />
+            </Col>
+        </Row>
+    </Container>
+);
