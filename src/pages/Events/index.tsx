@@ -4,7 +4,6 @@
  */
 import '../../theme.scss';
 
-import React from 'react';
 import { Chrono } from 'react-chrono';
 
 import eventList from './index.json';
