@@ -66,13 +66,14 @@ export const Events: React.FC = () => {
                             className="iconfont icon-jiantou1-copy"
                         />
                         <Swiper
+                            className="swiper-container"
                             modules={[Navigation, Autoplay]}
-                            grabCursor={true}
+                            grabCursor
                             slidesPerView={3}
                             centeredSlides={false}
                             slidesPerGroup={1}
                             spaceBetween={65}
-                            loop={true}
+                            loop
                             autoplay={{
                                 delay: 3000,
                                 disableOnInteraction: false
@@ -81,7 +82,6 @@ export const Events: React.FC = () => {
                                 nextEl: '#swiper-button-next',
                                 prevEl: '#swiper-button-prev'
                             }}
-                            className="swiper-container"
                         >
                             {events.map(({ title, url }) => (
                                 <SwiperSlide
