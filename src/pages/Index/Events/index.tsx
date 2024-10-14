@@ -30,9 +30,9 @@ export const Events: React.FC = () => {
 
         const contentEvents =
             document.querySelector<HTMLElement>('.content-events');
-        if (contentEvents) {
+
+        if (contentEvents)
             contentEvents.style.marginRight = `${(panelWidth - bodyWidth) / 2}px`;
-        }
     };
 
     return (
