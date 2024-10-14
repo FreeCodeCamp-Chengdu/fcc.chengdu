@@ -88,12 +88,8 @@ export const Events: React.FC = () => {
                                     key={url + ''}
                                     className="event-panel"
                                 >
-                                    <div>
-                                        <img src={url + ''} alt={title} />
-                                        <p style={{ color: 'white' }}>
-                                            {title}
-                                        </p>
-                                    </div>
+                                    <img src={url + ''} alt={title} />
+                                    <p className="text-white">{title}</p>
                                 </SwiperSlide>
                             ))}
                         </Swiper>
