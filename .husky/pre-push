@@ -1,1 +1,1 @@
-rm -rf .parcel-cache && npm run build
+npm run build
