@@ -10,8 +10,6 @@ import { events } from './events';
 import './style.scss';
 
 export class Events extends Component {
-    private swiperRef = createRef<HTMLDivElement>();
-
     componentDidMount() {
         this.setMarginLeft();
         window.addEventListener('resize', this.setMarginLeft);
@@ -55,7 +53,7 @@ export class Events extends Component {
                     </div>
 
                     <div className="content-events">
-                        <div className="events-slider" ref={this.swiperRef}>
+                        <div className="events-slider">
                             <i
                                 id="swiper-button-prev"
                                 className="iconfont icon-jiantou1-copy-copy-copy"
