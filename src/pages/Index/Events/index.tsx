@@ -2,7 +2,7 @@
  * @desc 大事件记录、展示板块
  * @author
  */
-import { Component, createRef, RefObject } from 'react';
+import { Component } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 
