@@ -6,11 +6,6 @@ import { Component, createRef, RefObject } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 
-// 导入 Swiper 样式
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/autoplay';
-
 import { events } from './events';
 import './style.scss';
 
