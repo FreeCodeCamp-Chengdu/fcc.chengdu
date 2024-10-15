@@ -42,7 +42,7 @@ export const Events: FC = () => (
                     slideShow
                     slideItemDuration={3000}
                     theme={{
-                        primary: 'primary',
+                        primary: '#0077B6',
                         secondary: 'secondary',
                         cardBgColor: 'bg-light',
                         cardForeColor: 'text-dark',
