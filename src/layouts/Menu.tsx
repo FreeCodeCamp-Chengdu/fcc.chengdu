@@ -4,11 +4,11 @@ import logo from '../assets/images/fcc-logo.png';
 
 export class Menu extends Component {
     scroll() {
-        if (window.pageYOffset != null) {
+        if (window.scrollY != null) {
             //  支持IE9 +
             return {
-                left: window.pageXOffset,
-                top: window.pageYOffset
+                left: window.scrollX,
+                top: window.scrollY
             };
         } else if (document.compatMode == 'CSS1Compat') {
             // 声明了DTD
