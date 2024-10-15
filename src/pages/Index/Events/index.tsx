@@ -10,12 +10,7 @@ import { events } from './events';
 import './style.scss';
 
 export class Events extends Component {
-    private swiperRef: RefObject<HTMLDivElement>;
-
-    constructor(props: {}) {
-        super(props);
-        this.swiperRef = createRef();
-    }
+    private swiperRef = createRef<HTMLDivElement>();
 
     componentDidMount() {
         this.setMarginLeft();
