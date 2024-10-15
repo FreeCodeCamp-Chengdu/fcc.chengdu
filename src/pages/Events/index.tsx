@@ -34,7 +34,7 @@ const items = list.map(
 export const Events: FC = () => (
     <Container>
         <Row>
-            <Col md={12}>
+            <Col className="col-12">
                 <Chrono
                     items={items}
                     mode="VERTICAL_ALTERNATING"
@@ -42,11 +42,11 @@ export const Events: FC = () => (
                     slideShow
                     slideItemDuration={3000}
                     theme={{
-                        primary: '#0077B6',
-                        secondary: '#48CAE4',
-                        cardBgColor: '#CAF0F8',
-                        cardForeColor: '#03045E',
-                        titleColor: '#023E8A'
+                        primary: 'primary',
+                        secondary: 'secondary',
+                        cardBgColor: 'bg-light',
+                        cardForeColor: 'text-dark',
+                        titleColor: 'text-primary'
                     }}
                     fontSizes={{
                         cardTitle: '1.3rem',
