@@ -5,13 +5,14 @@
 import './style.scss';
 import { Row, Col } from 'react-bootstrap';
 const info1 = new URL('../../../assets/images/info1.png', import.meta.url) + '';
+const info2 = new URL('../../../assets/images/info2.png', import.meta.url) + '';
 
 export const Info = () => (
     <div className="Panel index-info">
         <div className="info-row">
             <Row>
                 <Col xs={12} md={5} className="ImagePanel">
-                    <img src={require('../../../assets/images/info2.png')} />
+                    <img src={info2} alt="Info 2" />
                 </Col>
                 <Col xs={12} md={7} className="info-panel">
                     <h3 className="title">freeCodeCamp 是什么？</h3>

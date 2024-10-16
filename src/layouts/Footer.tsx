@@ -1,14 +1,14 @@
-import { Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 import { About } from './About';
 import FLogo from '../assets/images/fcc-logo.png';
 
 export const Footer = () => (
     <footer className="Footer">
-        <div className="container-fluid footer-bg">
+        <Container fluid className="footer-bg">
             <Row className="align-items-center">
                 <Col md={6}>
                     <div className="left-content">
-                        <img src={FLogo} alt="FCC logo" className="img-fluid" />
+                        <Image src={FLogo} alt="FCC logo" fluid />
                         <p>"人人皆可编程"营造有温度的技术社区</p>
                     </div>
                 </Col>
@@ -18,7 +18,7 @@ export const Footer = () => (
                     </div>
                 </Col>
             </Row>
-        </div>
+        </Container>
         <div className="container-fluid info">
             <Row>
                 <Col md={6}>
