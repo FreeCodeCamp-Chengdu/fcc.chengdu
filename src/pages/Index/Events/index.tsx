@@ -3,47 +3,33 @@
  * @author
  */
 import { Component } from 'react';
-import { Constructor } from 'web-utility';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from 'swiper/modules';
 
 import { events } from './events';
 import './style.scss';
 
-declare global {
-    const Swiper: Constructor<any>;
-}
-
 export class Events extends Component {
     componentDidMount() {
-        new Swiper('.swiper-container', {
-            grabCursor: true,
-            setWrapperSize: true,
-            roundLengths: true,
-            a11y: true, // 无障碍
-            autoplay: true,
-            slidesPerView: 'auto',
-            loopedSlides: events.length,
-            centeredSlides: false,
-            slidesPerGroup: 1,
-            spaceBetween: 65,
-            loop: true,
-            navigation: {
-                nextEl: '#swiper-button-next',
-                prevEl: '#swiper-button-prev'
-            }
-            // scrollbar: {
-            //     el: '.swiper-scrollbar',
-            // }
-        });
+        this.setMarginLeft();
+        window.addEventListener('resize', this.setMarginLeft);
     }
 
-    setMarginLeft() {
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.setMarginLeft);
+    }
+
+    setMarginLeft = () => {
         const bodyWidth = document.body.clientWidth,
-            panelWidth = document.querySelector('#index-events')!.clientWidth;
+            panelWidth =
+                document.querySelector('#index-events')?.clientWidth || 0;
 
-        document.querySelector<HTMLElement>(
-            '.content-events'
-        )!.style.marginRight = (panelWidth - bodyWidth) / 2 + 'px';
-    }
+        const contentEvents =
+            document.querySelector<HTMLElement>('.content-events');
+
+        if (contentEvents)
+            contentEvents.style.marginRight = `${(panelWidth - bodyWidth) / 2}px`;
+    };
 
     render() {
         return (
@@ -76,25 +62,34 @@ export class Events extends Component {
                                 id="swiper-button-next"
                                 className="iconfont icon-jiantou1-copy"
                             />
-                            <div className="swiper-container">
-                                <div
-                                    className="swiper-wrapper slider-content"
-                                    style={{ width: events.length * 455 }}
-                                >
-                                    {events.map(({ title, url }) => (
-                                        <div
-                                            key={url + ''}
-                                            className="swiper-slide event-panel"
-                                        >
-                                            <div>
-                                                <img src={url + ''} />
-                                                <p>{title}</p>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                                {/* <div class="swiper-scrollbar"></div> */}
-                            </div>
+                            <Swiper
+                                className="swiper-container"
+                                modules={[Navigation, Autoplay]}
+                                grabCursor
+                                slidesPerView={3}
+                                centeredSlides={false}
+                                slidesPerGroup={1}
+                                spaceBetween={65}
+                                loop
+                                autoplay={{
+                                    delay: 3000,
+                                    disableOnInteraction: false
+                                }}
+                                navigation={{
+                                    nextEl: '#swiper-button-next',
+                                    prevEl: '#swiper-button-prev'
+                                }}
+                            >
+                                {events.map(({ title, url }) => (
+                                    <SwiperSlide
+                                        key={url + ''}
+                                        className="event-panel"
+                                    >
+                                        <img src={url + ''} alt={title} />
+                                        <p className="text-white">{title}</p>
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
                         </div>
                     </div>
                 </div>

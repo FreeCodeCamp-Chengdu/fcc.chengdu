@@ -4,86 +4,60 @@
  */
 import '../../theme.scss';
 
-import type {} from 'jquery';
-import { Component } from 'react';
+import { FC } from 'react';
+import { Chrono } from 'react-chrono';
+import { Container, Row, Col } from 'react-bootstrap';
 
 import eventList from './index.json';
 
-declare global {
-    interface JQuery {
-        vivaTimeline: (options: object) => JQuery;
-    }
-}
 type EventItem = (typeof eventList)[0] & {
-    pos: 'left' | 'right';
     date: string;
 };
 
-const pos = { 1: 'left', '-1': 'right' },
-    list: EventItem[] = [];
-let initPos = -1;
-
-for (const event of eventList) {
-    const s = event.time;
-
-    list.unshift({
+const list: EventItem[] = eventList
+    .map(event => ({
         ...event,
-        pos: pos[(initPos *= -1)],
-        date: `${s.slice(0, 4)}年${+s.slice(4, 6)}月${+s.slice(6)}日`
-    });
-}
+        date: `${event.time.slice(0, 4)}年${+event.time.slice(4, 6)}月${+event.time.slice(6)}日`
+    }))
+    .reverse();
 
-export class Events extends Component {
-    componentDidMount() {
-        $('.VivaTimeline').vivaTimeline({
-            carousel: true,
-            carouselTime: 3000
-        });
-    }
+const items = list.map(
+    ({ type, title, date, describe, imageList: [{ url = '' } = {}] }) => ({
+        title: date,
+        cardTitle: `${type} - ${title}`,
+        cardSubtitle: describe,
+        cardDetailedText: describe,
+        media: { type: 'IMAGE', source: { url } }
+    })
+);
 
-    render() {
-        return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-12">
-                        <div className="VivaTimeline">
-                            <dl>
-                                {list.map((item, index) => (
-                                    <div key={`event-panel-${index}`}>
-                                        <dd
-                                            className={`pos-${item.pos} clearfix`}
-                                        >
-                                            <div className="circ"></div>
-                                            <div className="time">
-                                                {item.date}
-                                            </div>
-                                            <div className="events">
-                                                <div className="events-header">
-                                                    {item.type} - {item.title}
-                                                </div>
-                                                <div className="events-body">
-                                                    <div className="">
-                                                        <div className="col-md-6 pull-left">
-                                                            <img
-                                                                alt={`${item.title}`}
-                                                                className="events-object img-responsive img-rounded"
-                                                                src={`${item.imageList[0].url}`}
-                                                            />
-                                                        </div>
-                                                        <div className="events-desc">
-                                                            {item.describe}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </dd>
-                                    </div>
-                                ))}
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-}
+export const Events: FC = () => (
+    <Container>
+        <Row>
+            <Col xs={12}>
+                <Chrono
+                    items={items}
+                    mode="VERTICAL_ALTERNATING"
+                    cardHeight={200}
+                    slideShow
+                    slideItemDuration={3000}
+                    theme={{
+                        primary: '#0077B6',
+                        secondary: 'secondary',
+                        cardBgColor: 'bg-light',
+                        cardForeColor: 'text-dark',
+                        titleColor: 'text-primary'
+                    }}
+                    fontSizes={{
+                        cardTitle: '1.3rem',
+                        cardSubtitle: '1rem',
+                        cardText: '0.9rem',
+                        title: '1rem'
+                    }}
+                    timelinePointShape="circle"
+                    lineWidth={3}
+                />
+            </Col>
+        </Row>
+    </Container>
+);
