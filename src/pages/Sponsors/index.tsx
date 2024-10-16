@@ -3,6 +3,7 @@
  * @author
  */
 import { Row, Col } from 'react-bootstrap';
+
 import sponsors from './data';
 import './style.css';
 
