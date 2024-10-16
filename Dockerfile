@@ -1,5 +1,31 @@
-FROM nginx:latest
-COPY ./default.conf /etc/nginx/conf.d/
-COPY ./build/ /usr/share/nginx/html
+FROM node:20-slim as build
 
-CMD ["nginx","-g","daemon off;"]
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable
+
+# set workdir
+COPY . /app
+WORKDIR /app
+
+# 复制 package.json 和 pnpm-lock.yaml（如果存在）
+COPY package.json pnpm-lock.yaml* ./
+
+# install dependencies
+RUN pnpm install --frozen-lockfile
+
+
+# build file to dist dir
+RUN pnpm run build
+
+# 运行阶段
+FROM caddy
+
+# copy build file to caddy
+COPY --from=build /app/dist /usr/share/caddy
+
+# copy caddy file to caddy
+COPY Caddyfile /etc/caddy/Caddyfile
+
+# expose port
+EXPOSE 80 443
