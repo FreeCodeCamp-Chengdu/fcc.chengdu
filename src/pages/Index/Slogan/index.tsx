@@ -4,7 +4,7 @@
  */
 
 import bannerIcon from '../../../assets/images/banner-icon.png';
-import styles from './index.module.scss';
+import * as styles from './index.module.scss';
 
 export const Slogan = () => (
     <div className={`${styles.Panel} ${styles['index-slogan']}`}>
