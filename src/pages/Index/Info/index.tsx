@@ -3,13 +3,13 @@
  * @author
  */
 import './style.scss';
-
+import { Container, Row, Col } from 'react-bootstrap';
 const info1 = new URL('../../../assets/images/info1.png', import.meta.url) + '';
 
 export const Info = () => (
     <div className="Panel index-info">
         <div className="info-row">
-            <div className="row">
+            <div className="Row">
                 <div className="col-xs-12 col-md-5 ImagePanel">
                     <img src={require('../../../assets/images/info2.png')} />
                 </div>
@@ -24,7 +24,7 @@ export const Info = () => (
                     </p>
                 </div>
             </div>
-            <div className="row">
+            <div className="Row">
                 <div className="col-xs-12 col-md-8 info-panel">
                     <h3 className="title">FCC成都社区</h3>
                     <p>
