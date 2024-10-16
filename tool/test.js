@@ -1,31 +1,29 @@
-const fs = require('fs');
-const { EOL } = require('os');
+import { readFileSync, writeFileSync } from 'fs';
+import { EOL } from 'os';
+import { dirname, join } from 'path';
 
-var list = fs.readFileSync(__dirname + '/event.txt').toString().split(EOL);
+const [filePath] = process.argv.slice(2);
 
-var events = [];
-list.forEach((item, index) => {
-    let regx = /第(.*)期：《(.*?)》- (\d+)\s形式：(.*)/i;
-    let arr = item.match(regx) ;
-    if(arr===null){
-        console.log(item);
-        return;
-    }
-    events.push( {
-        "time": arr[3],
-        "title": arr[2],
-        "type": arr[4],
-        "address": "拾级Cafe",
-        "describe": arr[2],
-        "imageList": [
-            {
-                "url": "./xxx",
-                "describe": "xxxxxxxxxxxx"
-            }
-        ]
-    });
-});
+console.time(filePath);
 
+const list = (readFileSync(filePath) + '').split(EOL);
 
-fs.writeFileSync(__dirname + '/index.json', JSON.stringify(events, null, 4));
-//console.log(list);
+const regx = /第(.*)期：《(.*?)》- (\d+)\s形式：(.*)/i,
+    address = '拾级Cafe',
+    imageList = [{ url: './xxx', describe: 'xxxxxxxxxxxx' }];
+
+const events = list
+    .map(item => {
+        const [matched, index, title, time, type] = item.match(regx) || [];
+
+        if (!matched) return console.log(item);
+
+        return { time, title, type, address, describe: title, imageList };
+    })
+    .filter(Boolean);
+
+writeFileSync(
+    join(dirname(filePath), 'index.json'),
+    JSON.stringify(events, null, 4)
+);
+console.timeEnd(filePath);

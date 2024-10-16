@@ -13,9 +13,12 @@ $titlePanelWidth: 200px;
         width: $contentWidth;
         max-width: $contentMaxWidth;
         margin: auto;
+        @media (max-width: 992px) {
+            overflow: hidden;
+        }
         .TitleRow {
             position: relative;
-            .title-panel{
+            .title-panel {
                 width: $titlePanelWidth;
                 height: 180px;
                 color: #fff;
@@ -29,12 +32,12 @@ $titlePanelWidth: 200px;
                     display: inline-block;
                     vertical-align: middle;
                 }
-                .preloader{
+                .preloader {
                     position: relative;
                     margin: 15px;
                     height: 12px;
-                    span{
-                        position:absolute;
+                    span {
+                        position: absolute;
                         width: 12px;
                         height: 12px;
                         border: 5px solid rgba(255, 255, 255, 0.6);
@@ -42,24 +45,24 @@ $titlePanelWidth: 200px;
                         opacity: 0;
                         animation: radar 2s infinite linear;
                     }
-                    span:nth-child(1){
+                    span:nth-child(1) {
                         opacity: 1;
                         background: #fff;
                         border: none;
                         animation: none;
                         animation-delay: 0s;
                     }
-                    span:nth-child(2){
+                    span:nth-child(2) {
                         animation-delay: 0.66s;
                     }
-                    span:nth-child(3){
+                    span:nth-child(3) {
                         width: 32px;
                         height: 32px;
                         margin: -10px;
                         border: 0.4px solid rgba(255, 255, 255, 0.5);
                         animation-delay: 1.33s;
                     }
-                    span:nth-child(4){
+                    span:nth-child(4) {
                         width: 48px;
                         height: 48px;
                         margin: -18px;
@@ -67,16 +70,29 @@ $titlePanelWidth: 200px;
                         animation-delay: 1.33s;
                     }
                 }
-                @keyframes radar{
-                    0%{transform: scale(0);opacity: 0;}
-                    25%{transform: scale(1);opacity: 0.5;}
-                    50%{transform: scale(2);opacity: 1.0;}
-                    75%{transform: scale(3);opacity: 0.5;}
-                    100%{transform: scale(4);opacity: 0;}
+                @keyframes radar {
+                    0% {
+                        transform: scale(0);
+                        opacity: 0;
+                    }
+                    25% {
+                        transform: scale(1);
+                        opacity: 0.5;
+                    }
+                    50% {
+                        transform: scale(2);
+                        opacity: 1;
+                    }
+                    75% {
+                        transform: scale(3);
+                        opacity: 0.5;
+                    }
+                    100% {
+                        transform: scale(4);
+                        opacity: 0;
+                    }
                 }
-        
             }
-
         }
         // 背景文字
         .title-panel-bg {
@@ -93,12 +109,12 @@ $titlePanelWidth: 200px;
             padding: 58px 0px;
             font-weight: bold;
         }
-        .content-events{
+        .content-events {
             height: 360px;
             clear: both;
             margin-right: -10vw;
-            @media (min-width: 1600px){
-                margin-right: calc( (1280px - 100vw) / 2 );
+            @media (min-width: 1600px) {
+                margin-right: calc((1280px - 100vw) / 2);
             }
             .events-slider {
                 width: auto;
@@ -117,7 +133,7 @@ $titlePanelWidth: 200px;
                     .event-panel {
                         width: 390px;
                         height: auto;
-                        display: inline-block; 
+                        display: inline-block;
                         img {
                             width: 390px;
                             height: 220px;
@@ -128,22 +144,15 @@ $titlePanelWidth: 200px;
                             text-align: center;
                             font-size: 16px;
                             font-weight: bold;
-                            color: rgba(254,254,254,1);
+                            color: rgba(254, 254, 254, 1);
                             line-height: 56px;
                         }
                     }
-                    .event-panel:last-child{
+                    .event-panel:last-child {
                         margin-right: 0px;
                     }
                 }
             }
-        }
-    }
-}
-@media(max-width:992px){
-    .index-events{
-        .MainContainer{
-            overflow: hidden;
         }
     }
 }

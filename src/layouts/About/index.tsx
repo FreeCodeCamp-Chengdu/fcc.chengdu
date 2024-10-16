@@ -4,24 +4,24 @@
  */
 
 import details from './data';
-import './style.scss';
+import * as styles from './index.module.scss';
 
 export const About = () => (
-    <div className="about-container">
+    <ul className={`list-unstyled ${styles['about-container']}`}>
         {details.map(({ img, icon }, index) => (
-            <div key={img} className="about-panel">
-                <div className="detail-img">
+            <li key={img} className={styles['about-panel']}>
+                <div className={styles['detail-img']}>
                     <img src={img} />
                 </div>
                 <button
                     id={`popover${index}`}
                     type="button"
-                    className="btn"
+                    className={styles.btn}
                     data-placement="top"
                 >
                     <i className={`iconfont ${icon}`} />
                 </button>
-            </div>
+            </li>
         ))}
-    </div>
+    </ul>
 );

@@ -1,0 +1,67 @@
+@import '../../theme.scss';
+
+/* 底部 */
+.Footer {
+    width: 100%;
+    height: $footerHeight;
+    background: rgba(0, 0, 0, 1);
+    color: $fontColor;
+    .footer-bg {
+        height: 100%;
+        width: $contentWidth;
+        max-width: $contentMaxWidth;
+        padding: 115px 0px 75px;
+        position: relative;
+        margin: auto;
+    }
+    .left-content {
+        text-align: left;
+        @media (max-width: 992px) {
+            text-align: center;
+        }
+        img {
+            width: 78px;
+            height: 45px;
+        }
+        p {
+            margin-top: 10px;
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+    .right-content {
+        line-height: 85px;
+        padding-right: 15px;
+        text-align: right;
+        @media (max-width: 992px) {
+            text-align: center;
+        }
+    }
+    .info {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        z-index: 1000;
+        background: #0a0a0a;
+        margin-left: 0px;
+        margin-right: 0px;
+        .row {
+            width: $contentWidth;
+            max-width: $contentMaxWidth;
+            margin: auto;
+            p {
+                font-size: 12px;
+                color: #545454;
+                margin: 0;
+                &.left {
+                    text-align: left;
+                }
+                &.right {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

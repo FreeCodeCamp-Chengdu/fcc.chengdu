@@ -1,0 +1,93 @@
+.card-img-top {
+    width: 100%;
+    border-radius: 100%;
+}
+.member-item {
+    display: inline-block;
+    width: 18%;
+    border-radius: 6px;
+    padding: 1.5rem 1rem 1.5rem 2rem;
+    font-size: 0;
+    margin: 0 1%;
+    color: #515151;
+    &.last-item {
+        margin-right: 0;
+        @media (max-width: 992px) {
+            margin-right: 5%;
+        }
+    }
+    &:hover {
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.08);
+        transform: scale(1.05);
+    }
+    @media (max-width: 992px) {
+        display: inline-block;
+        width: 40%;
+        border-radius: 6px;
+        padding: 3rem 2rem 3rem 4rem;
+        font-size: 0;
+        margin: 0 5%;
+        color: #515151;
+    }
+    @media (max-width: 480px) {
+        display: inline-block;
+        width: 98%;
+        border-radius: 6px;
+        padding: 1.5rem 1rem 1.5rem 2rem;
+        font-size: 0;
+        margin: 0 2%;
+        color: #515151;
+    }
+}
+.img-block {
+    width: 59px;
+    height: 59px;
+    display: inline-block;
+    margin-right: 14px;
+    vertical-align: top;
+    @media (max-width: 480px) {
+        width: 20%;
+        height: auto;
+        margin: 0 5%;
+    }
+}
+.content {
+    display: inline-block;
+    font-size: 12px;
+    width: 109px;
+    vertical-align: top;
+    @media (max-width: 480px) {
+        width: 60%;
+        margin: 0 0 0 5%;
+    }
+}
+.name {
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+}
+.responsibility {
+    font-size: 14px;
+    color: #515151;
+}
+.GithubLink {
+    color: rgba(110, 90, 208, 1);
+    font-size: 12px;
+    line-height: 24px;
+    i {
+        font-size: 14px;
+        margin-right: 2px;
+        color: #aaa;
+    }
+}
+.user-icon {
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+}
+.text-over {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

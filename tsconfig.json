@@ -1,12 +1,14 @@
 {
     "compilerOptions": {
+        "checkJs": true,
         "module": "ESNext",
         "moduleResolution": "Node",
         "allowSyntheticDefaultImports": true,
         "resolveJsonModule": true,
         "jsx": "react-jsx",
         "skipLibCheck": true,
-        "lib": ["ESNext", "DOM"]
+        "lib": ["ESNext", "DOM"],
+        "outDir": "dist"
     },
-    "include": ["src/**/*"]
+    "include": ["src/**/*", "**/*.js"]
 }
