@@ -8,7 +8,7 @@ import { FC } from 'react';
 import { Chrono } from 'react-chrono';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import eventList from './index.json';
+import eventList from '../../../tool/index.json';
 
 type EventItem = (typeof eventList)[0] & {
     date: string;

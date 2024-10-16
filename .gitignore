@@ -26,4 +26,4 @@ yarn-error.log*
 # localhost
 .vscode/
 *.css
-/tool
+/tool/index.json

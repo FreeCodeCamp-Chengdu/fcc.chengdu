@@ -4,10 +4,10 @@ import { Events } from './Events';
 import { Members } from './Members';
 
 export const Index = () => (
-    <div className="Content">
+    <>
         <Slogan />
         <Info />
         <Events />
         <Members />
-    </div>
+    </>
 );

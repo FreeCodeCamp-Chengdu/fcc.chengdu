@@ -11,31 +11,26 @@ $footerHeight: 358px;
 $contentWidth: 80%;
 $contentMaxWidth: 1280px;
 
-
-$bgColor: #FFFEFF;
-$titleColor: #2F2F2F;
+$bgColor: #fffeff;
+$titleColor: #2f2f2f;
 $fontColor: #434343;
 
-
 // 全局标签样式
-a:hover {
-  text-decoration: none;
+a {
+    text-decoration: none;
 }
-
-div, p, a {
-    padding: 0px;
-}
-
 *:focus {
     outline: none;
 }
 
 // 自定义公共样式
-.Panel {
-    .title {
-        position: relative;
-        letter-spacing: 0.8px;
-        margin-bottom: 20px;
-    }
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $bgColor;
 }
-
+.Panel .title {
+    position: relative;
+    letter-spacing: 0.8px;
+    margin-bottom: 20px;
+}

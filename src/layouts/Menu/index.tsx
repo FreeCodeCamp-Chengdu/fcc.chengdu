@@ -1,41 +1,20 @@
 import { Component } from 'react';
 
-import logo from '../assets/images/fcc-logo.png';
+import logo from '../../assets/images/fcc-logo.png';
+import * as style from './index.module.scss';
 
 export class Menu extends Component {
-    scroll() {
-        if (window.scrollY != null) {
-            //  支持IE9 +
-            return {
-                left: window.scrollX,
-                top: window.scrollY
-            };
-        } else if (document.compatMode == 'CSS1Compat') {
-            // 声明了DTD
-
-            return {
-                left: document.documentElement.scrollLeft,
-                top: document.documentElement.scrollTop
-            };
-        }
-
-        return {
-            left: document.body.scrollLeft,
-            top: document.body.scrollTop
-        };
-    }
-
     componentDidMount() {
         window.onscroll = e => {
-            let top = this.scroll().top || 0;
+            // let top = this.scroll().top || 0;
             // 导航条滚动到一定高度，变换导航栏的背景色和透明度
         };
     }
 
     render() {
         return (
-            <div className="Menu">
-                <div className="Nav">
+            <div className={style.Menu}>
+                <div className={style.Nav}>
                     <img src={logo} />
                     <div>
                         <a href="#/events">历史活动</a>

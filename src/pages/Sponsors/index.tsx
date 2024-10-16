@@ -5,13 +5,13 @@
 import { Row, Col } from 'react-bootstrap';
 
 import sponsors from './data';
-import './style.css';
+import * as style from './index.module.scss';
 
 export const Sponsors = () => (
-    <Row className="logolist">
+    <Row className={style.logolist}>
         {sponsors.map(({ img, title }) => (
             <Col key={img} md={2} xs={4}>
-                <img src={img} alt={title} className="logo-img" />
+                <img src={img} alt={title} className={style['logo-img']} />
             </Col>
         ))}
     </Row>
