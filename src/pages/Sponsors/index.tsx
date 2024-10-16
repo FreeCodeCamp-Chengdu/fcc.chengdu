@@ -2,7 +2,7 @@
  * @desc 历史活动页面
  * @author
  */
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import sponsors from './data';
 import './style.css';
 

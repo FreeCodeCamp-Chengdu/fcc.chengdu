@@ -1,11 +1,11 @@
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import { About } from './About';
 import FLogo from '../assets/images/fcc-logo.png';
 
 export const Footer = () => (
     <footer className="Footer">
         <div className="container-fluid footer-bg">
-            <div className="Row align-items-center">
+            <Row className="align-items-center">
                 <Col md={6}>
                     <div className="left-content">
                         <img src={FLogo} alt="FCC logo" className="img-fluid" />
@@ -17,10 +17,10 @@ export const Footer = () => (
                         <About />
                     </div>
                 </Col>
-            </div>
+            </Row>
         </div>
         <div className="container-fluid info">
-            <div className="Row">
+            <Row>
                 <Col md={6}>
                     <p className="text-md-start">
                         版权所有©2018 FCC成都社区保留
@@ -29,7 +29,7 @@ export const Footer = () => (
                 <Col md={6}>
                     <p className="text-md-end">FCC成都社区</p>
                 </Col>
-            </div>
+            </Row>
         </div>
     </footer>
 );

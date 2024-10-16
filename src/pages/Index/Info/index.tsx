@@ -3,7 +3,7 @@
  * @author
  */
 import './style.scss';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 const info1 = new URL('../../../assets/images/info1.png', import.meta.url) + '';
 
 export const Info = () => (
