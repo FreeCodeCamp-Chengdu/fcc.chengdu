@@ -3,7 +3,9 @@
  * @author
  */
 import './style.scss';
+
 import { Row, Col } from 'react-bootstrap';
+
 const info1 = new URL('../../../assets/images/info1.png', import.meta.url) + '';
 const info2 = new URL('../../../assets/images/info2.png', import.meta.url) + '';
 
