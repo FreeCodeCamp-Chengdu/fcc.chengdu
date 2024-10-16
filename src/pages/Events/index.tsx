@@ -34,7 +34,7 @@ const items = list.map(
 export const Events: FC = () => (
     <Container>
         <Row>
-            <Col className="col-12">
+            <Col xs={12}>
                 <Chrono
                     items={items}
                     mode="VERTICAL_ALTERNATING"
