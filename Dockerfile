@@ -10,12 +10,12 @@ COPY package.json pnpm-lock.yaml* ./
 RUN pnpm i --frozen-lockfile
 
 COPY . /app
-RUN pnpm run build
+RUN pnpm build
 
 # run HTTP server container
 FROM caddy
 
-# copy build file to caddy
+# copy distribution files from build container
 COPY --from=build /app/dist /usr/share/caddy
 
 # expose ports
