@@ -7,16 +7,16 @@ RUN corepack enable
 WORKDIR /app
 
 COPY package.json pnpm-lock.yaml* ./
-RUN pnpm install --frozen-lockfile
+RUN pnpm i --frozen-lockfile
 
 COPY . /app
 RUN pnpm run build
 
-# run caddy
+# run HTTP server container
 FROM caddy
 
 # copy build file to caddy
 COPY --from=build /app/dist /usr/share/caddy
 
-# expose port
+# expose ports
 EXPOSE 80 443
