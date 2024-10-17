@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 
-import styles from './Card.module.scss';
+import * as styles from './Card.module.scss';
 
 export const Card = ({ url, img, name, responsibility, urlType, index }) => (
     <div
