@@ -1,18 +1,20 @@
-version: '2'
+version: '3.8'
+
 services:
-  proxy:
-    image: rancher/lb-service-haproxy:v0.7.9
+  fcc-app:
+    image: freecodecamp-chengdu/web-site:latest
+    container_name: fcc-chengdu-web
+    restart: always
     ports:
-    - 9988:9988/tcp
-    labels:
-      io.rancher.container.agent.role: environmentAdmin
-      io.rancher.container.create_agent: 'true'
-  freecodecamp-chengdu-fcc-chengdu:
-    mem_limit: 104857600
-    image: freecodecamp-chengdu/fcc.chengdu:master
+      - '80:80'
+      - '443:443'
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
     environment:
-      PORT: '80'
-    stdin_open: true
-    external_links:
-    - db/db:mysql
-    tty: true
+      - TZ=Asia/Shanghai # set timezone
+    healthcheck:
+      test: ['CMD', 'wget', '--no-verbose', '--tries=1', '--spider', 'http://localhost']
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
