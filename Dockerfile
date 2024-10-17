@@ -4,18 +4,12 @@ ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 RUN corepack enable
 
-# set workdir
-COPY . /app
 WORKDIR /app
 
-# copy package.json and pnpm-lock.yaml
 COPY package.json pnpm-lock.yaml* ./
-
-# install dependencies
 RUN pnpm install --frozen-lockfile
 
-
-# build file to dist dir
+COPY . /app
 RUN pnpm run build
 
 # run caddy

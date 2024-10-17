@@ -2,8 +2,8 @@ version: '3.8'
 
 services:
     fcc-app:
-        image: freecodecamp-chengdu/fcc:latest
-        container_name: fcc-chengdu
+        image: freecodecamp-chengdu/web-site:latest
+        container_name: fcc-chengdu-web
         restart: always
         ports:
             - '80:80'

@@ -1,5 +1,5 @@
 # replace example.com with your actual domain
-example.com {
+test.fcc-cd.dev {
   encode gzip
   root * /usr/share/caddy
   file_server
