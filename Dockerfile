@@ -8,7 +8,7 @@ RUN corepack enable
 COPY . /app
 WORKDIR /app
 
-# 复制 package.json 和 pnpm-lock.yaml（如果存在）
+# copy package.json and pnpm-lock.yaml
 COPY package.json pnpm-lock.yaml* ./
 
 # install dependencies
@@ -18,7 +18,7 @@ RUN pnpm install --frozen-lockfile
 # build file to dist dir
 RUN pnpm run build
 
-# 运行阶段
+# run caddy
 FROM caddy
 
 # copy build file to caddy
