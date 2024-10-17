@@ -1,31 +1,7 @@
-{
-  # global settings
-  email your-email@example.com  # set Let's Encrypt account
-}
-
 # replace example.com with your actual domain
 example.com {
   encode gzip
   root * /usr/share/caddy
   file_server
   try_files {path} /index.html
-
-  # automatically HTTPS
-  tls {
-    protocols tls1.2 tls1.3
-  }
-
-  # secure headers
-  header {
-    Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-    X-XSS-Protection "1; mode=block"
-    X-Frame-Options "DENY"
-    X-Content-Type-Options "nosniff"
-    Referrer-Policy "strict-origin-when-cross-origin"
-  }
-}
-
-# HTTP redirect to HTTPS
-http://example.com {
-  redir https://{host}{uri} permanent
 }

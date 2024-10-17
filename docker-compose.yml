@@ -9,11 +9,9 @@ services:
             - '80:80'
             - '443:443'
         volumes:
-            - ./caddy_data:/data
-            - ./caddy_config:/config
             - ./Caddyfile:/etc/caddy/Caddyfile:ro
         environment:
-            - TZ=Asia/Shanghai # 设置时区，根据需要
+            - TZ=Asia/Shanghai # set timezone
         healthcheck:
             test:
                 [

@@ -24,8 +24,5 @@ FROM caddy
 # copy build file to caddy
 COPY --from=build /app/dist /usr/share/caddy
 
-# copy caddy file to caddy
-COPY Caddyfile /etc/caddy/Caddyfile
-
 # expose port
 EXPOSE 80 443
