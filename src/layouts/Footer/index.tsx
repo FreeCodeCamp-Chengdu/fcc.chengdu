@@ -1,8 +1,9 @@
 import { Col, Container, Image, Row } from 'react-bootstrap';
 
-import FLogo from '../../assets/images/fcc-logo.png';
 import { About } from '../About';
-import * as styles from './index.module.scss';
+import * as styles from './index.module.less';
+
+const FLogo = new URL('../../assets/images/fcc-logo.png', import.meta.url) + '';
 
 export const Footer = () => (
     <footer className={styles.Footer}>
@@ -24,9 +25,7 @@ export const Footer = () => (
         <Container fluid className={styles.info}>
             <Row>
                 <Col md={6}>
-                    <p className="text-md-start">
-                        版权所有©2018 FCC成都社区保留
-                    </p>
+                    <p className="text-md-start">版权所有©2018 FCC成都社区保留</p>
                 </Col>
                 <Col md={6}>
                     <p className="text-md-end">FCC成都社区</p>

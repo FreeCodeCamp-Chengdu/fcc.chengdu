@@ -4,7 +4,7 @@
  */
 
 import details from './data';
-import * as styles from './index.module.scss';
+import * as styles from './index.module.less';
 
 export const About = () => (
     <ul className={`list-unstyled ${styles['about-container']}`}>

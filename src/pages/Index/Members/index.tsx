@@ -2,7 +2,7 @@
  * @desc 社区组织者板块
  * @author
  */
-import * as styles from './index.module.scss';
+import * as styles from './index.module.less';
 import { Card } from './Card';
 import { MEMBERS } from './MembersConfig';
 

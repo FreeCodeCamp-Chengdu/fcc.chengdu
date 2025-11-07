@@ -1,6 +1,6 @@
-import logoMicroSoft from '../../assets/sponsors/Microsoft.png';
-import logoBBD from '../../assets/sponsors/BBD.png';
-import logoGDG from '../../assets/sponsors/GDG.png';
+const logoMicroSoft = new URL('../../assets/sponsors/Microsoft.png', import.meta.url) + '';
+const logoBBD = new URL('../../assets/sponsors/BBD.png', import.meta.url) + '';
+const logoGDG = new URL('../../assets/sponsors/GDG.png', import.meta.url) + '';
 
 export default [
     { title: 'BBD', img: logoMicroSoft },

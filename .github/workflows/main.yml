@@ -1,33 +1,33 @@
 name: CI & CD
 on:
-    push:
-        branches:
-            - master
+  push:
+    branches:
+      - master
 jobs:
-    Build-and-Deploy:
-        runs-on: ubuntu-latest
-        permissions:
-            contents: write
-        steps:
-            - uses: actions/checkout@v4
+  Build-and-Deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
 
-            - uses: pnpm/action-setup@v4
-              with:
-                  version: 9
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
 
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: 20
-                  cache: pnpm
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
 
-            - name: Install & Build
-              run: |
-                  pnpm i --frozen-lockfile
-                  pnpm build
+      - name: Install & Build
+        run: |
+          pnpm i --frozen-lockfile
+          pnpm build
 
-            - name: Update document
-              uses: peaceiris/actions-gh-pages@v4
-              with:
-                  publish_dir: ./dist
-                  personal_token: ${{ secrets.GITHUB_TOKEN }}
-                  force_orphan: true
+      - name: Update document
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          publish_dir: ./dist
+          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          force_orphan: true

@@ -1,7 +1,7 @@
-@import '../../../theme.scss';
-$right: 0%;
-$top: 154px;
-$titlePanelWidth: 200px;
+@import '../../../theme.less';
+@right: 0%;
+@top: 154px;
+@titlePanelWidth: 200px;
 
 .index-events {
     background: url('../../../assets/images/banner1_bg.png');
@@ -10,8 +10,8 @@ $titlePanelWidth: 200px;
     height: 100vh;
     min-height: 888px;
     .MainContainer {
-        width: $contentWidth;
-        max-width: $contentMaxWidth;
+        width: @contentWidth;
+        max-width: @contentMaxWidth;
         margin: auto;
         @media (max-width: 992px) {
             overflow: hidden;
@@ -19,13 +19,13 @@ $titlePanelWidth: 200px;
         .TitleRow {
             position: relative;
             .title-panel {
-                width: $titlePanelWidth;
+                width: @titlePanelWidth;
                 height: 180px;
                 color: #fff;
                 padding: 0px 20px;
                 font-size: 20px;
                 line-height: 180px;
-                margin-top: $top;
+                margin-top: @top;
                 float: right;
                 background: inherit;
                 div {
@@ -99,10 +99,10 @@ $titlePanelWidth: 200px;
             // z-index: -1000;
             color: rgba(255, 255, 255, 0.1);
             position: absolute;
-            right: $right;
-            top: $top;
+            right: @right;
+            top: @top;
             height: 100%;
-            width: $titlePanelWidth;
+            width: @titlePanelWidth;
             height: 180px;
             font-size: 38px;
             line-height: 26px;

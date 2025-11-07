@@ -1,22 +1,22 @@
-@import '../../theme.scss';
+@import '../../theme.less';
 
 /* 菜单 */
 .Menu {
     position: sticky;
     top: 0px;
     width: 100%;
-    height: $menuHeight;
+    height: @menuHeight;
     background: inherit;
     background-size: cover;
     z-index: 1000;
     .Nav {
-        width: $contentWidth;
-        max-width: $contentMaxWidth;
+        width: @contentWidth;
+        max-width: @contentMaxWidth;
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: auto;
-        line-height: $menuHeight;
+        line-height: @menuHeight;
         img {
             height: 45px;
         }

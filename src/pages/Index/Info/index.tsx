@@ -4,7 +4,7 @@
  */
 import { Row, Col } from 'react-bootstrap';
 
-import * as styles from './index.module.scss';
+import * as styles from './index.module.less';
 
 const info1 = new URL('../../../assets/images/info1.png', import.meta.url) + '';
 const info2 = new URL('../../../assets/images/info2.png', import.meta.url) + '';
@@ -20,8 +20,8 @@ export const Info = () => (
                     <h3 className={styles.title}>freeCodeCamp 是什么？</h3>
                     <p>
                         freeCodeCamp(简称FCC)  是由美国的 Quincy Larson
-                        发起的开源项目，截止2018.02.03，在 Github
-                        上获得29+万Star(排名第一)。有长达 1600 小时的课程，
+                        发起的开源项目，截止2018.02.03，在 Github 上获得29+万Star(排名第一)。有长达
+                        1600 小时的课程，
                         并且是基于浏览器、课程免费、证书免费、结合了游戏化闯关的乐趣。FCC是一个在160多个国家和2000多个城市的拥有与100w
                         +开发者的社区。
                     </p>

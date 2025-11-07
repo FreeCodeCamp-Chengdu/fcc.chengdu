@@ -1,7 +1,7 @@
-import qrWechat from '../../assets/images/qr-wechat.jpg';
-import qrQq from '../../assets/images/qr-qq.jpg';
-import qrWeibo from '../../assets/images/qr-weibo.png';
-import qrGithub from '../../assets/images/qr-github.png';
+const qrWechat = new URL('../../assets/images/qr-wechat.jpg', import.meta.url) + '';
+const qrQq = new URL('../../assets/images/qr-qq.jpg', import.meta.url) + '';
+const qrWeibo = new URL('../../assets/images/qr-weibo.png', import.meta.url) + '';
+const qrGithub = new URL('../../assets/images/qr-github.png', import.meta.url) + '';
 
 export default [
     { desc: '官方微信公众号', img: qrWechat, icon: 'icon-weixin' },

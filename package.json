@@ -4,21 +4,21 @@
     "private": true,
     "dependencies": {
         "classnames": "^2.5.1",
-        "react": "^18.3.1",
-        "react-bootstrap": "^2.10.5",
-        "react-chrono": "^2.6.1",
-        "react-dom": "^18.3.1",
-        "react-router-dom": "^6.27.0",
-        "swiper": "^11.1.14",
-        "web-utility": "^4.4.1"
+        "react": "^19.2.0",
+        "react-bootstrap": "^2.10.10",
+        "react-chrono": "^3.1.0",
+        "react-dom": "^19.2.0",
+        "react-router-dom": "^7.9.5",
+        "swiper": "^12.0.3",
+        "web-utility": "^4.6.4"
     },
     "scripts": {
-        "prepare": "husky",
+        "prepare": "husky || true",
         "install": "tsx tool/test tool/event.txt",
         "test": "lint-staged  &&  tsc --noEmit",
         "clean": "rm -rf .parcel-cache/ dist/",
         "start": "npm run clean  &&  parcel public/index.html",
-        "pack": "npm run clean  &&  parcel build public/index.html --public-url .",
+        "pack": "npm run clean  &&  parcel build public/index.html --no-scope-hoist --public-url .",
         "build": "npm run pack  &&  workbox generateSW"
     },
     "fcc": {
@@ -28,20 +28,30 @@
         "publicUrl": "https://fcc-cd.dev/fcc.chengdu/"
     },
     "devDependencies": {
-        "@parcel/packager-raw-url": "~2.12.0",
-        "@parcel/transformer-sass": "~2.12.0",
-        "@parcel/transformer-webmanifest": "~2.12.0",
-        "@types/node": "^20.16.11",
-        "@types/react": "^18.3.11",
-        "@types/react-dom": "^18.3.1",
-        "husky": "^9.1.6",
-        "lint-staged": "^15.2.10",
-        "parcel": "~2.12.0",
-        "prettier": "^3.3.3",
+        "@parcel/packager-raw-url": "~2.16.1",
+        "@parcel/transformer-less": "~2.16.1",
+        "@parcel/transformer-webmanifest": "~2.16.1",
+        "@types/node": "^22.19.0",
+        "@types/react": "^19.2.2",
+        "@types/react-dom": "^19.2.2",
+        "husky": "^9.1.7",
+        "less": "^4.4.2",
+        "lint-staged": "^16.2.6",
+        "parcel": "~2.16.1",
+        "prettier": "^3.6.2",
         "process": "^0.11.10",
-        "tsx": "^4.19.1",
-        "typescript": "~5.6.3",
-        "workbox-cli": "^7.1.0"
+        "tsx": "^4.20.6",
+        "typescript": "~5.9.3",
+        "workbox-cli": "^7.3.0"
+    },
+    "pnpm": {
+        "onlyBuiltDependencies": [
+            "@parcel/watcher",
+            "@swc/core",
+            "esbuild",
+            "lmdb",
+            "msgpackr-extract"
+        ]
     },
     "prettier": {
         "singleQuote": true,
@@ -59,7 +69,7 @@
         ]
     },
     "lint-staged": {
-        "*.{html,md,scss,json,yml,js,jsx,ts,tsx}": "prettier --write"
+        "*.{html,md,less,json,yml,js,jsx,ts,tsx}": "prettier --write"
     },
     "browserslist": "> 0.5%, last 2 versions, not dead, IE 11",
     "@parcel/resolver-default": {

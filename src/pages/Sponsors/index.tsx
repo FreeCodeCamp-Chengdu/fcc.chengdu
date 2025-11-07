@@ -5,7 +5,7 @@
 import { Row, Col } from 'react-bootstrap';
 
 import sponsors from './data';
-import * as style from './index.module.scss';
+import * as style from './index.module.less';
 
 export const Sponsors = () => (
     <Row className={style.logolist}>
