@@ -18,7 +18,7 @@
 - 路由组件：[React Router v7][13]
 - 时间轴组件：[React Chrono v3][14]
 - 轮播组件：[Swiper v12][15]
-- CI/CD：GitHub [Actions][3] + [Pages][16]
+- CI/CD：GitHub [Actions][16] + [Pages][17]
 
 ## 项目结构
 
@@ -134,7 +134,7 @@ pnpm build
 
 - 所有代码将自动通过 Prettier 格式化（配置见 `package.json`）
 - 提交前会运行 `lint-staged` + TypeScript 类型检查
-- 遵循 [Conventional Commits][17] 规范
+- 遵循 [Conventional Commits][18] 规范
 
 ## 版权所有
 
@@ -149,11 +149,12 @@ Copyright © 2018-2025 fCC 成都社区
 [7]: https://pnpm.io/
 [8]: https://github.com/EasyWebApp/web-utility
 [9]: https://parceljs.org/
-[10]: https://developers.google.com/web/tools/workbox
+[10]: https://developer.chrome.com/docs/workbox
 [11]: https://react.dev/
 [12]: https://react-bootstrap.github.io/
 [13]: https://reactrouter.com/
 [14]: https://react-chrono.prabhumurthy.com/
 [15]: https://swiperjs.com/
-[16]: https://pages.github.com/
-[17]: https://www.conventionalcommits.org/
+[16]: https://github.com/features/actions
+[17]: https://pages.github.com/
+[18]: https://www.conventionalcommits.org/zh-hans/
