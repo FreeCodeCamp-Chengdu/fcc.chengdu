@@ -1,7 +1,8 @@
 import { Component } from 'react';
 
-import logo from '../../assets/images/fcc-logo.png';
 import * as style from './index.module.scss';
+
+const logo = new URL('../../assets/images/fcc-logo.png', import.meta.url) + '';
 
 export class Menu extends Component {
     componentDidMount() {
@@ -15,16 +16,15 @@ export class Menu extends Component {
         return (
             <div className={style.Menu}>
                 <div className={style.Nav}>
-                    <img src={logo} />
+                    <a href="">
+                        <img src={logo} />
+                    </a>
                     <div>
                         <a href="#/events">历史活动</a>
                         <a href="https://web-conf.dev/" target="_blank">
                             前端大会
                         </a>
-                        <a
-                            href="https://web-conf.dev/#2018/Code4City/"
-                            target="_blank"
-                        >
+                        <a href="https://web-conf.dev/#2018/Code4City/" target="_blank">
                             code for city
                         </a>
                         <a href="#/sponsors">赞助商</a>

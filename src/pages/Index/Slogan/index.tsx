@@ -3,8 +3,9 @@
  * @author
  */
 
-import bannerIcon from '../../../assets/images/banner-icon.png';
 import * as styles from './index.module.scss';
+
+const bannerIcon = new URL('../../../assets/images/banner-icon.png', import.meta.url) + '';
 
 export const Slogan = () => (
     <div className={`${styles.Panel} ${styles['index-slogan']}`}>
@@ -16,10 +17,7 @@ export const Slogan = () => (
                 </blockquote>
                 <div className={styles.SloganContent}>立即前往线上学习平台</div>
                 <div className={styles.MainLink}>
-                    <a
-                        href="https://www.freecodecamp.org/chinese/"
-                        target="_blank"
-                    >
+                    <a href="https://www.freecodecamp.org/chinese/" target="_blank">
                         中文版
                     </a>
                     <a href="https://www.freecodecamp.org/" target="_blank">

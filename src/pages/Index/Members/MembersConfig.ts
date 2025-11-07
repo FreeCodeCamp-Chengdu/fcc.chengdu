@@ -1,20 +1,20 @@
-import ccbImg from '../../../assets/avatars/ccb-min.jpg';
-import akImg from '../../../assets/avatars/Ak-min.jpg';
-import glowd from '../../../assets/avatars/glowd-min.jpg';
-import Dean from '../../../assets/avatars/Dean-min.jpg';
-import CaiTing from '../../../assets/avatars/caiting-min.jpeg';
-import Helen from '../../../assets/avatars/Helen-min.jpg';
-import janeZhen from '../../../assets/avatars/janeZhen-min.jpg';
-import lanhao from '../../../assets/avatars/lanhao-min.jpg';
-import liunanbing from '../../../assets/avatars/liunanbing-min.jpg';
-import qianyu from '../../../assets/avatars/qianyu-min.jpg';
-import qingsong from '../../../assets/avatars/qingsong-min.jpg';
-import shiyao from '../../../assets/avatars/shiyao-min.jpg';
-import Too from '../../../assets/avatars/Too-min.jpg';
-import wangbo from '../../../assets/avatars/wangbo-min.jpg';
-import wangjie from '../../../assets/avatars/wangjie-min.jpg';
-import xiaoshan from '../../../assets/avatars/xiaoshan-min.jpg';
-import yuqi from '../../../assets/avatars/yuqi-min.jpg';
+const ccbImg = new URL('../../../assets/avatars/ccb-min.jpg', import.meta.url) + '';
+const akImg = new URL('../../../assets/avatars/Ak-min.jpg', import.meta.url) + '';
+const glowd = new URL('../../../assets/avatars/glowd-min.jpg', import.meta.url) + '';
+const Dean = new URL('../../../assets/avatars/Dean-min.jpg', import.meta.url) + '';
+const CaiTing = new URL('../../../assets/avatars/caiting-min.jpeg', import.meta.url) + '';
+const Helen = new URL('../../../assets/avatars/Helen-min.jpg', import.meta.url) + '';
+const janeZhen = new URL('../../../assets/avatars/janeZhen-min.jpg', import.meta.url) + '';
+const lanhao = new URL('../../../assets/avatars/lanhao-min.jpg', import.meta.url) + '';
+const liunanbing = new URL('../../../assets/avatars/liunanbing-min.jpg', import.meta.url) + '';
+const qianyu = new URL('../../../assets/avatars/qianyu-min.jpg', import.meta.url) + '';
+const qingsong = new URL('../../../assets/avatars/qingsong-min.jpg', import.meta.url) + '';
+const shiyao = new URL('../../../assets/avatars/shiyao-min.jpg', import.meta.url) + '';
+const Too = new URL('../../../assets/avatars/Too-min.jpg', import.meta.url) + '';
+const wangbo = new URL('../../../assets/avatars/wangbo-min.jpg', import.meta.url) + '';
+const wangjie = new URL('../../../assets/avatars/wangjie-min.jpg', import.meta.url) + '';
+const xiaoshan = new URL('../../../assets/avatars/xiaoshan-min.jpg', import.meta.url) + '';
+const yuqi = new URL('../../../assets/avatars/yuqi-min.jpg', import.meta.url) + '';
 
 //用户链接类型
 const URL_TYPE_CLASS = {
