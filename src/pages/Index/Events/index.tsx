@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 
 import { events } from './events';
-import './style.scss';
+import './style.less';
 
 export class Events extends Component {
     componentDidMount() {
@@ -21,14 +21,11 @@ export class Events extends Component {
 
     setMarginLeft = () => {
         const bodyWidth = document.body.clientWidth,
-            panelWidth =
-                document.querySelector('#index-events')?.clientWidth || 0;
+            panelWidth = document.querySelector('#index-events')?.clientWidth || 0;
 
-        const contentEvents =
-            document.querySelector<HTMLElement>('.content-events');
+        const contentEvents = document.querySelector<HTMLElement>('.content-events');
 
-        if (contentEvents)
-            contentEvents.style.marginRight = `${(panelWidth - bodyWidth) / 2}px`;
+        if (contentEvents) contentEvents.style.marginRight = `${(panelWidth - bodyWidth) / 2}px`;
     };
 
     render() {
@@ -58,10 +55,7 @@ export class Events extends Component {
                                 id="swiper-button-prev"
                                 className="iconfont icon-jiantou1-copy-copy-copy"
                             />
-                            <i
-                                id="swiper-button-next"
-                                className="iconfont icon-jiantou1-copy"
-                            />
+                            <i id="swiper-button-next" className="iconfont icon-jiantou1-copy" />
                             <Swiper
                                 className="swiper-container"
                                 modules={[Navigation, Autoplay]}
@@ -81,10 +75,7 @@ export class Events extends Component {
                                 }}
                             >
                                 {events.map(({ title, url }) => (
-                                    <SwiperSlide
-                                        key={url + ''}
-                                        className="event-panel"
-                                    >
+                                    <SwiperSlide key={url + ''} className="event-panel">
                                         <img src={url + ''} alt={title} />
                                         <p className="text-white">{title}</p>
                                     </SwiperSlide>

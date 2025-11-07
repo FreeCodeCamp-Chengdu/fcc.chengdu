@@ -29,12 +29,13 @@
     },
     "devDependencies": {
         "@parcel/packager-raw-url": "~2.16.1",
-        "@parcel/transformer-sass": "~2.16.1",
+        "@parcel/transformer-less": "~2.16.1",
         "@parcel/transformer-webmanifest": "~2.16.1",
         "@types/node": "^22.19.0",
         "@types/react": "^19.2.2",
         "@types/react-dom": "^19.2.2",
         "husky": "^9.1.7",
+        "less": "^4.4.2",
         "lint-staged": "^16.2.6",
         "parcel": "~2.16.1",
         "prettier": "^3.6.2",
@@ -68,7 +69,7 @@
         ]
     },
     "lint-staged": {
-        "*.{html,md,scss,json,yml,js,jsx,ts,tsx}": "prettier --write"
+        "*.{html,md,less,json,yml,js,jsx,ts,tsx}": "prettier --write"
     },
     "browserslist": "> 0.5%, last 2 versions, not dead, IE 11",
     "@parcel/resolver-default": {

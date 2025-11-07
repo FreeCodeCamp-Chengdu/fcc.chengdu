@@ -1,7 +1,7 @@
 import { Col, Container, Image, Row } from 'react-bootstrap';
 
 import { About } from '../About';
-import * as styles from './index.module.scss';
+import * as styles from './index.module.less';
 
 const FLogo = new URL('../../assets/images/fcc-logo.png', import.meta.url) + '';
 

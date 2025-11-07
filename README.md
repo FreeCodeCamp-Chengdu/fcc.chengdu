@@ -4,17 +4,17 @@
 
 ## 技术栈
 
--   Node.js v20+
--   TypeScript v5+
--   Parcel v2+
--   SCSS：CSS 预处理
--   React v18+
+- Node.js v22+
+- TypeScript v5+
+- Parcel v2+
+- LESS：CSS 预处理
+- React v19+
 
 ## 项目结构
 
--   pubilc ------------------- 公共文件存放
--   src ---------------------- 项目源代码
-    -   layouts ------------- 页面结构
-    -   pages ------------- 具体页面
+- pubilc ------------------- 公共文件存放
+- src ---------------------- 项目源代码
+    - layouts ------------- 页面结构
+    - pages ------------- 具体页面
 
 [1]: https://github.com/FreeCodeCamp-Chengdu/fcc.chengdu/actions/workflows/main.yml

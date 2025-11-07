@@ -1,15 +1,15 @@
-@import '../../theme.scss';
+@import '../../theme.less';
 
 /* 底部 */
 .Footer {
     width: 100%;
-    height: $footerHeight;
+    height: @footerHeight;
     background: rgba(0, 0, 0, 1);
-    color: $fontColor;
+    color: @fontColor;
     .footer-bg {
         height: 100%;
-        width: $contentWidth;
-        max-width: $contentMaxWidth;
+        width: @contentWidth;
+        max-width: @contentMaxWidth;
         padding: 115px 0px 75px;
         position: relative;
         margin: auto;
@@ -48,8 +48,8 @@
         margin-left: 0px;
         margin-right: 0px;
         .row {
-            width: $contentWidth;
-            max-width: $contentMaxWidth;
+            width: @contentWidth;
+            max-width: @contentMaxWidth;
             margin: auto;
             p {
                 font-size: 12px;

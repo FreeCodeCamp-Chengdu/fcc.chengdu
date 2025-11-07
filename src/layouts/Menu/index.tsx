@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import * as style from './index.module.scss';
+import * as style from './index.module.less';
 
 const logo = new URL('../../assets/images/fcc-logo.png', import.meta.url) + '';
 

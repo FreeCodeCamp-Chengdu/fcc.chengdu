@@ -3,7 +3,7 @@
  * @author
  */
 
-import * as styles from './index.module.scss';
+import * as styles from './index.module.less';
 
 const bannerIcon = new URL('../../../assets/images/banner-icon.png', import.meta.url) + '';
 

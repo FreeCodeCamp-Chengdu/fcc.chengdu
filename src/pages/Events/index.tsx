@@ -2,7 +2,7 @@
  * @desc 历史活动页面
  * @author
  */
-import '../../theme.scss';
+import '../../theme.less';
 
 import { FC } from 'react';
 import { Chrono, TimelineProps } from 'react-chrono';
