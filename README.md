@@ -14,7 +14,7 @@
 - 打包工具：[Parcel v2][9]
 - PWA 框架：[Workbox v7][10]
 - 组件引擎：[React v19][11]
-- 组件套件：[React Bootstrap v2][12]
+- 组件套件：[Idea React v3][12]（基于 Bootstrap v6）
 - 路由组件：[React Router v7][13]
 - 时间轴组件：[React Chrono v3][14]
 - 轮播组件：[Swiper v12][15]
@@ -151,7 +151,7 @@ Copyright © 2018-2025 fCC 成都社区
 [9]: https://parceljs.org/
 [10]: https://developer.chrome.com/docs/workbox
 [11]: https://react.dev/
-[12]: https://react-bootstrap.github.io/
+[12]: https://idea2app.github.io/Idea-React/
 [13]: https://reactrouter.com/
 [14]: https://react-chrono.prabhumurthy.com/
 [15]: https://swiperjs.com/

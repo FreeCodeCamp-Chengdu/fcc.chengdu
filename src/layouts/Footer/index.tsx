@@ -1,4 +1,4 @@
-import { Col, Container, Image, Row } from 'react-bootstrap';
+import { Col, Container, Image, Row } from 'idea-react';
 
 import { About } from '../About';
 import * as styles from './index.module.less';
@@ -25,10 +25,10 @@ export const Footer = () => (
         <Container fluid className={styles.info}>
             <Row>
                 <Col md={6}>
-                    <p className="text-md-start">版权所有©2018 FCC成都社区保留</p>
+                    <p className="md:text-start">版权所有©2018 FCC成都社区保留</p>
                 </Col>
                 <Col md={6}>
-                    <p className="text-md-end">FCC成都社区</p>
+                    <p className="md:text-end">FCC成都社区</p>
                 </Col>
             </Row>
         </Container>
