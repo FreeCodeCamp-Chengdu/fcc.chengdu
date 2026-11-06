@@ -36,6 +36,7 @@
         "@types/node": "^22.19.0",
         "@types/react": "^19.2.2",
         "@types/react-dom": "^19.2.2",
+        "buffer": "^6.0.3",
         "husky": "^9.1.7",
         "less": "^4.4.2",
         "lint-staged": "^16.2.6",
