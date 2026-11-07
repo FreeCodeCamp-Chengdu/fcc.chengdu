@@ -6,10 +6,10 @@
 
 ## 技术栈
 
-- 逻辑语言：[TypeScript v5][4]
+- 逻辑语言：[TypeScript v6][4]
 - 样式语言：[LESS v4][5]
 - 运行环境：[Node.js v22][6]
-- 包管理器：[PNPM v10][7]
+- 包管理器：[PNPM v12][7]
 - 工具库：[Web utility v4][8]
 - 打包工具：[Parcel v2][9]
 - PWA 框架：[Workbox v7][10]
@@ -17,57 +17,57 @@
 - 组件套件：[Idea React v3][12]（基于 Bootstrap v6）
 - 路由组件：[React Router v7][13]
 - 时间轴组件：[React Chrono v3][14]
-- 轮播组件：[Swiper v12][15]
+- 轮播组件：[Swiper v14][15]
 - CI/CD：GitHub [Actions][16] + [Pages][17]
 
 ## 项目结构
 
 ```
 fcc.chengdu/
-├── public/              # 静态资源与 HTML 入口
-│   ├── index.html      # 应用入口页面
-│   ├── manifest.json   # PWA 配置清单
-│   └── avatar/         # 公共头像资源
+├── .github/workflows/  # GitHub Actions 构建与部署
+├── .dockerignore
+├── Dockerfile
+├── docker-compose.yml
+├── Caddyfile
+├── AGENTS.md           # 仓库开发规则
+├── public/             # HTML 入口、PWA 清单、图标与公共头像
+│   ├── index.html
+│   ├── manifest.json
+│   └── avatar/
 ├── src/
-│   ├── assets/         # 图片、图标等静态资源
-│   ├── layouts/        # 布局组件
-│   │   ├── Index.tsx   # 主布局
-│   │   ├── Menu/       # 导航菜单
-│   │   ├── Footer/     # 页脚
-│   │   ├── Content/    # 内容容器
-│   │   └── About/      # 关于我们弹窗
-│   ├── pages/          # 页面组件
-│   │   ├── Index/      # 首页
-│   │   │   ├── Slogan/ # 宗旨理念
-│   │   │   ├── Info/   # 社区介绍
-│   │   │   ├── Events/ # 大事件轮播
-│   │   │   └── Members/# 组织者风采
-│   │   ├── Events/     # 历史活动页面
-│   │   └── Sponsors/   # 赞助商页面
-│   ├── theme.less      # 全局主题变量（颜色、尺寸）
-│   ├── global.d.ts     # TypeScript 类型声明
-│   └── index.tsx       # React 应用入口
-├── tool/               # 工具脚本与数据
-│   ├── event.txt       # 活动原始数据
-│   └── index.json      # 处理后的活动数据
-├── workbox-config.js   # Service Worker 配置
-├── tsconfig.json       # TypeScript 配置
-└── package.json        # 项目依赖与脚本
+│   ├── assets/         # 页面图片、头像、活动与赞助商素材
+│   ├── layouts/        # 主布局、导航、页脚及关于我们
+│   ├── pages/
+│   │   ├── Index/      # 首页：宗旨、介绍、大事件、组织者
+│   │   ├── Events/     # 历史活动时间线
+│   │   └── Sponsors/   # 赞助商
+│   ├── theme.less      # 全局主题变量
+│   ├── global.d.ts     # LESS 模块类型
+│   └── index.tsx       # React 应用入口与 Service Worker 注册
+├── tool/               # 活动数据及处理脚本
+├── .parcelrc           # Parcel TypeScript 转换配置
+├── pnpm-workspace.yaml # PNPM 工作区配置
+├── tsconfig.json       # TypeScript 与装饰器编译配置
+├── workbox-config.js   # Service Worker 生成配置
+├── package.json        # 依赖与命令
+└── pnpm-lock.yaml      # 依赖锁定文件
 ```
 
 ## 样式系统
 
-本项目已从 SCSS 迁移至 LESS：
+本项目使用 Bootstrap 6、Idea React 与 LESS：
 
-- **主题变量**：`src/theme.less` 定义全局变量（`@contentWidth`、`@menuHeight`、颜色等）
-- **CSS modules**：所有 `.module.less` 文件自动隔离作用域，避免样式冲突
-- **Parcel 自动处理**：通过 `@parcel/transformer-less` 编译 LESS 为 CSS
+- **Bootstrap 与组件**：Bootstrap 6 样式在 `public/index.html` 加载，组件使用 `idea-react`。
+- **工具类优先**：布局、间距、对齐、颜色和响应式优先使用 Bootstrap 工具类；当前响应式类采用 `lg:flex-row` 等 Bootstrap 6 语法。
+- **LESS**：仅在工具类无法表达具体样式时使用；样式模块采用 `.module.less`，由 Parcel 编译并隔离作用域。
+- **主题变量**：`src/theme.less` 定义公共颜色和尺寸变量。
+- **MobX 装饰器**：Parcel 使用 `@parcel/transformer-typescript-tsc`；`tsconfig.json` 配置 stage-3 装饰器兼容的编译目标。
 
 **添加新样式时**：
 
-1. 创建 `.less` 或 `.module.less` 文件
-2. 在文件顶部 `@import '../../theme.less';` 引入全局变量
-3. 在组件中 `import * as styles from './xxx.module.less';` 使用
+1. 先使用 Bootstrap/Idea React 的组件和工具类。
+2. 确需自定义样式时，创建 `.module.less` 并就近维护；响应式规则嵌套在组件默认规则中。
+3. 需要主题变量时导入 `src/theme.less`，并在组件中导入对应 LESS 模块。
 
 ## 开发
 
@@ -97,12 +97,17 @@ npm start
 # 代码格式化与类型检查
 npm t
 
-# 清理构建缓存
-pnpm clean
+# 仅构建 Parcel 生产资源
+pnpm pack
 
-# 生产构建（含 Service Worker）
+# 生产构建并生成 Service Worker
 pnpm build
+
+# 清理 Parcel 缓存和构建产物
+pnpm clean
 ```
+
+`npm start` 默认在 `http://localhost:1234` 启动 Parcel 开发服务器。`npm test` 会运行 `lint-staged` 和 `tsc --noEmit`。
 
 ## 部署
 
@@ -138,7 +143,7 @@ pnpm build
 
 ## 版权所有
 
-Copyright © 2018-2025 fCC 成都社区
+Copyright © 2018-2026 fCC 成都社区
 
 [1]: https://www.freecodecamp.org/
 [2]: https://github.com/FreeCodeCamp-Chengdu/fcc.chengdu/actions/workflows/main.yml/badge.svg
