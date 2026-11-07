@@ -13,6 +13,30 @@ import { Component } from 'react';
 
 const logo = new URL('../../assets/images/fcc-logo.png', import.meta.url) + '';
 
+type MenuLink = {
+    title: string;
+    href: string;
+    target?: '_blank';
+    rel?: 'noreferrer';
+};
+
+const links: MenuLink[] = [
+    { title: '历史活动', href: '#/events' },
+    {
+        title: '前端大会',
+        href: 'https://web-conf.dev/',
+        target: '_blank',
+        rel: 'noreferrer'
+    },
+    {
+        title: 'code for city',
+        href: 'https://web-conf.dev/#2018/Code4City/',
+        target: '_blank',
+        rel: 'noreferrer'
+    },
+    { title: '赞助商', href: '#/sponsors' }
+];
+
 @observer
 export class Menu extends Component {
     @observable accessor open = false;
@@ -23,30 +47,16 @@ export class Menu extends Component {
 
     renderLinks = () => (
         <NavbarNav className="flex-fill lg:justify-content-end gap-3">
-            <NavLink className="text-white" href="#/events" onClick={this.hide}>
-                历史活动
-            </NavLink>
-            <NavLink
-                className="text-white"
-                href="https://web-conf.dev/"
-                target="_blank"
-                rel="noreferrer"
-                onClick={this.hide}
-            >
-                前端大会
-            </NavLink>
-            <NavLink
-                className="text-white"
-                href="https://web-conf.dev/#2018/Code4City/"
-                target="_blank"
-                rel="noreferrer"
-                onClick={this.hide}
-            >
-                code for city
-            </NavLink>
-            <NavLink className="text-white" href="#/sponsors" onClick={this.hide}>
-                赞助商
-            </NavLink>
+            {links.map(({ title, href, target, rel }) => (
+                <NavLink
+                    className="text-white"
+                    key={href}
+                    {...{ href, target, rel }}
+                    onClick={this.hide}
+                >
+                    {title}
+                </NavLink>
+            ))}
         </NavbarNav>
     );
 
