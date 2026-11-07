@@ -34,7 +34,7 @@ const items: TimelineProps['items'] = list.map(
 export const Events: FC = () => (
     <Container>
         <Row>
-            <Col span={12}>
+            <Col xs={12}>
                 <Chrono
                     items={items}
                     mode="alternating"

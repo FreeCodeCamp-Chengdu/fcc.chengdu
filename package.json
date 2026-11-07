@@ -4,7 +4,7 @@
     "private": true,
     "dependencies": {
         "classnames": "^2.5.1",
-        "idea-react": "^3.0.0-beta.3",
+        "idea-react": "^3.0.0-beta.4",
         "mobx": "^7.1.5",
         "mobx-react": "^10.0.3",
         "react": "^19.3.1",
@@ -18,7 +18,7 @@
         "prepare": "husky || true",
         "install": "tsx tool/test tool/event.txt",
         "test": "lint-staged  &&  tsc --noEmit",
-        "clean": "rm -rf .parcel-cache/ dist/",
+        "clean": "rimraf .parcel-cache/ dist/",
         "start": "npm run clean  &&  parcel public/index.html",
         "pack": "npm run clean  &&  parcel build public/index.html --no-scope-hoist --public-url .",
         "build": "npm run pack  &&  workbox generateSW"
@@ -45,6 +45,7 @@
         "parcel": "~2.16.4",
         "prettier": "^3.9.10",
         "process": "^0.11.10",
+        "rimraf": "^6.1.4",
         "tsx": "^4.23.15",
         "typescript": "~6.0.3",
         "workbox-cli": "^7.4.1"

@@ -11,13 +11,7 @@ export const Sponsors = () => (
         <h1 className="text-center text-white fs-3 mb-5 px-3">感谢以下赞助商对社区的支持</h1>
         <Row className="justify-content-center align-items-center g-4">
             {sponsors.map(({ img, title }) => (
-                <Col
-                    key={img}
-                    span={12}
-                    sm={6}
-                    lg={4}
-                    className="d-flex justify-content-center p-4"
-                >
+                <Col key={img} xs={12} sm={6} lg={4} className="d-flex justify-content-center p-4">
                     <img
                         src={img}
                         alt={title}

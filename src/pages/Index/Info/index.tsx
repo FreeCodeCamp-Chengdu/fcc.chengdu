@@ -13,10 +13,10 @@ export const Info = () => (
     <div className={`${styles.Panel} ${styles['index-info']}`}>
         <div className={styles['info-row']}>
             <Row>
-                <Col span={12} md={5} className={styles.ImagePanel}>
+                <Col xs={12} md={5} className={styles.ImagePanel}>
                     <img src={info2} alt="Info 2" />
                 </Col>
-                <Col span={12} md={7} className={styles['info-panel']}>
+                <Col xs={12} md={7} className={styles['info-panel']}>
                     <h3 className={styles.title}>freeCodeCamp 是什么？</h3>
                     <p>
                         freeCodeCamp(简称FCC)  是由美国的 Quincy Larson
@@ -28,14 +28,14 @@ export const Info = () => (
                 </Col>
             </Row>
             <Row>
-                <Col span={12} md={8} className={styles['info-panel']}>
+                <Col xs={12} md={8} className={styles['info-panel']}>
                     <h3 className={styles.title}>FCC成都社区</h3>
                     <p>
                         FCC 成都社区,
                         成立于2016年6月，是一个非营利性的公益性技术社区，是由一群热血有志青年爱好者，利用个人业余休息时间组建而成的技术社区，目的是为了搭建一个友好的交流、学习、互助的社区，帮助成都市众多的开发者，技术爱好者提升个人技术能力。社区致力于做西南地区首个有温度与情怀的技术社区，鼓励人人皆可编程实现个人梦想。
                     </p>
                 </Col>
-                <Col span={12} md={4} className={styles.ImagePanel}>
+                <Col xs={12} md={4} className={styles.ImagePanel}>
                     <img src={info1} alt="Info 1" />
                 </Col>
             </Row>
