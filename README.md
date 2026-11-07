@@ -151,7 +151,7 @@ Copyright © 2018-2025 fCC 成都社区
 [9]: https://parceljs.org/
 [10]: https://developer.chrome.com/docs/workbox
 [11]: https://react.dev/
-[12]: https://idea2app.github.io/Idea-React/
+[12]: https://idea-react.pages.dev/
 [13]: https://reactrouter.com/
 [14]: https://react-chrono.prabhumurthy.com/
 [15]: https://swiperjs.com/

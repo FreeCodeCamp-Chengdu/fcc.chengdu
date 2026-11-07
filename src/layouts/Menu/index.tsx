@@ -1,36 +1,78 @@
+import {
+    Container,
+    Drawer,
+    Navbar,
+    NavbarBrand,
+    NavbarNav,
+    NavbarToggler,
+    NavLink
+} from 'idea-react';
+import { action, observable } from 'mobx';
+import { observer } from 'mobx-react';
 import { Component } from 'react';
-
-import * as style from './index.module.less';
 
 const logo = new URL('../../assets/images/fcc-logo.png', import.meta.url) + '';
 
+@observer
 export class Menu extends Component {
-    componentDidMount() {
-        window.onscroll = e => {
-            // let top = this.scroll().top || 0;
-            // 导航条滚动到一定高度，变换导航栏的背景色和透明度
-        };
-    }
+    @observable accessor open = false;
+
+    @action toggle = () => (this.open = !this.open);
+
+    @action hide = () => (this.open = false);
+
+    renderLinks = () => (
+        <NavbarNav className="flex-fill lg:justify-content-end gap-3">
+            <NavLink className="text-white" href="#/events" onClick={this.hide}>
+                历史活动
+            </NavLink>
+            <NavLink
+                className="text-white"
+                href="https://web-conf.dev/"
+                target="_blank"
+                rel="noreferrer"
+                onClick={this.hide}
+            >
+                前端大会
+            </NavLink>
+            <NavLink
+                className="text-white"
+                href="https://web-conf.dev/#2018/Code4City/"
+                target="_blank"
+                rel="noreferrer"
+                onClick={this.hide}
+            >
+                code for city
+            </NavLink>
+            <NavLink className="text-white" href="#/sponsors" onClick={this.hide}>
+                赞助商
+            </NavLink>
+        </NavbarNav>
+    );
 
     render() {
         return (
-            <div className={style.Menu}>
-                <div className={style.Nav}>
-                    <a href="">
-                        <img src={logo} />
-                    </a>
-                    <div>
-                        <a href="#/events">历史活动</a>
-                        <a href="https://web-conf.dev/" target="_blank">
-                            前端大会
-                        </a>
-                        <a href="https://web-conf.dev/#2018/Code4City/" target="_blank">
-                            code for city
-                        </a>
-                        <a href="#/sponsors">赞助商</a>
-                    </div>
-                </div>
-            </div>
+            <Navbar className="sticky-top z-3 bg-transparent" expand="lg" theme="dark">
+                <Container className="d-flex align-items-center justify-content-between py-2">
+                    <NavbarBrand className="m-0" href="#/">
+                        <img className="d-block" src={logo} height={45} alt="FCC 成都社区" />
+                    </NavbarBrand>
+
+                    <NavbarToggler expanded={this.open} onClick={this.toggle} />
+
+                    <Drawer
+                        className="w-100"
+                        bodyClassName="d-flex flex-column lg:flex-row lg:align-items-center gap-3"
+                        title="导航菜单"
+                        responsive="lg"
+                        placement="end"
+                        open={this.open}
+                        onDismiss={this.hide}
+                    >
+                        {this.renderLinks()}
+                    </Drawer>
+                </Container>
+            </Navbar>
         );
     }
 }

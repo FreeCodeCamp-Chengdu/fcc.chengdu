@@ -6,6 +6,9 @@
     height: @footerHeight;
     background: rgba(0, 0, 0, 1);
     color: @fontColor;
+    @media (max-width: 767.98px) {
+        height: auto;
+    }
     .footer-bg {
         height: 100%;
         width: @contentWidth;
@@ -13,12 +16,13 @@
         padding: 115px 0px 75px;
         position: relative;
         margin: auto;
+        @media (max-width: 767.98px) {
+            width: 100%;
+            height: auto;
+            padding: 3rem 1rem 2rem;
+        }
     }
     .left-content {
-        text-align: left;
-        @media (max-width: 992px) {
-            text-align: center;
-        }
         img {
             width: 78px;
             height: 45px;
@@ -31,10 +35,8 @@
     }
     .right-content {
         line-height: 85px;
-        padding-right: 15px;
-        text-align: right;
-        @media (max-width: 992px) {
-            text-align: center;
+        @media (max-width: 767.98px) {
+            line-height: 1.25;
         }
     }
     .info {
@@ -61,6 +63,15 @@
                 &.right {
                     text-align: right;
                 }
+            }
+        }
+        @media (max-width: 767.98px) {
+            height: auto;
+            line-height: 1.5;
+            padding: 1rem;
+            .row {
+                width: 100%;
+                max-width: none;
             }
         }
     }

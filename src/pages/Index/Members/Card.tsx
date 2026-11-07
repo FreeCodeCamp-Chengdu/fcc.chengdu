@@ -1,8 +1,12 @@
 import classnames from 'classnames';
+import { FC } from 'react';
 
+import { Member } from './MembersConfig';
 import * as styles from './Card.module.less';
 
-export const Card = ({ url, img, name, responsibility, urlType, index }) => (
+type Props = Member & { index: number };
+
+export const Card: FC<Props> = ({ url, img, name, responsibility, urlType, index }) => (
     <div
         className={classnames(styles['member-item'], {
             [styles['last-item']]: index % 5 === 4

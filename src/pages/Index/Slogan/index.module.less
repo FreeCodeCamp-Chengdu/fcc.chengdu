@@ -5,36 +5,55 @@
         width: @contentWidth;
         max-width: @contentMaxWidth;
         margin: 0 auto;
+        @media (max-width: 767.98px) {
+            width: 90%;
+        }
     }
     .BannerContainer {
         align-items: center;
         color: #fff;
         position: relative;
         height: 700px;
+        @media (max-width: 767.98px) {
+            height: 420px;
+        }
         .SloganContainer {
             position: absolute;
             left: 0;
             top: 50%;
             transform: translateY(-50%);
-
-            @media (max-width: 992px) {
-                word-wrap: break-word;
+            @media (max-width: 767.98px) {
+                right: 0;
             }
             .Slogan {
                 font-size: 30px;
                 margin-bottom: 22px;
+                @media (max-width: 767.98px) {
+                    font-size: clamp(22px, 6vw, 30px);
+                    margin-bottom: 16px;
+                }
             }
             .SloganContent {
                 font-size: 23px;
+                @media (max-width: 767.98px) {
+                    font-size: 18px;
+                }
             }
             .MainLink {
                 margin-top: 60px;
+                @media (max-width: 767.98px) {
+                    margin-top: 32px;
+                }
                 a {
                     color: #fff;
                     display: inline-block;
                     line-height: 44px;
                     padding: 0 30px;
                     margin-right: 10px;
+                    @media (max-width: 767.98px) {
+                        margin-right: 0;
+                        padding: 0 20px;
+                    }
                     border: 1px solid #fff;
                     border-radius: 22px;
                     &:hover {
