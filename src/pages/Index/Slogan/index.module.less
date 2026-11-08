@@ -5,47 +5,60 @@
         width: @contentWidth;
         max-width: @contentMaxWidth;
         margin: 0 auto;
+        @media (max-width: 767.98px) {
+            width: 90%;
+        }
     }
     .BannerContainer {
         align-items: center;
         color: #fff;
         position: relative;
         height: 700px;
+        @media (max-width: 767.98px) {
+            height: 420px;
+        }
         .SloganContainer {
+            text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.35);
             position: absolute;
             left: 0;
             top: 50%;
             transform: translateY(-50%);
-
-            @media (max-width: 992px) {
-                word-wrap: break-word;
+            @media (max-width: 767.98px) {
+                right: 0;
             }
             .Slogan {
                 font-size: 30px;
                 margin-bottom: 22px;
+                @media (max-width: 767.98px) {
+                    font-size: clamp(22px, 6vw, 30px);
+                    margin-bottom: 16px;
+                }
             }
             .SloganContent {
                 font-size: 23px;
+                @media (max-width: 767.98px) {
+                    font-size: 18px;
+                }
             }
             .MainLink {
                 margin-top: 60px;
+                @media (max-width: 767.98px) {
+                    margin-top: 32px;
+                }
                 a {
+                    --bs-btn-color: #fff;
+                    --bs-btn-bg: transparent;
+                    --bs-btn-border-color: #fff;
+                    --bs-btn-hover-color: #244d9f;
+                    --bs-btn-hover-bg: #fff;
+                    --bs-btn-hover-border-color: #fff;
                     color: #fff;
-                    display: inline-block;
-                    line-height: 44px;
-                    padding: 0 30px;
-                    margin-right: 10px;
-                    border: 1px solid #fff;
-                    border-radius: 22px;
+                    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.2);
                     &:hover {
-                        color: darken(#fff, 10%);
-                        border-color: darken(#fff, 10%);
+                        color: #244d9f;
+                        text-shadow: none;
                         text-decoration: none;
                     }
-                }
-                a:hover {
-                    background: #fff;
-                    color: #7ba2ff;
                 }
             }
         }

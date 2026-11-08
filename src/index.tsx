@@ -17,4 +17,4 @@ if (NODE_ENV !== 'development')
 
 serviceWorker?.addEventListener('controllerchange', () => location.reload());
 
-createRoot(document.getElementById('root')).render(<App />);
+createRoot(document.getElementById('root')!).render(<App />);
