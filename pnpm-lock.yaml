@@ -12,8 +12,8 @@ importers:
         specifier: ^2.5.1
         version: 2.5.1
       idea-react:
-        specifier: ^3.0.0-beta.4
-        version: 3.0.0-beta.4(mobx-react@10.0.3(mobx@7.1.5)(react@19.3.1))(mobx@7.1.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@6.0.3)
+        specifier: ^3.0.0-beta.5
+        version: 3.0.0-beta.5(mobx-react@10.0.3(mobx@7.1.5)(react@19.3.1))(mobx@7.1.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@6.0.3)
       mobx:
         specifier: ^7.1.5
         version: 7.1.5
@@ -32,9 +32,6 @@ importers:
       react-router-dom:
         specifier: ^7.18.5
         version: 7.18.5(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
-      swiper:
-        specifier: ^14.4.0
-        version: 14.4.0
       web-utility:
         specifier: ^4.8.1
         version: 4.8.1(typescript@6.0.3)
@@ -2344,8 +2341,8 @@ packages:
   idb@7.1.1:
     resolution: {integrity: sha512-gchesWBzyvGHRO9W8tzUWFDycow5gwjvFKfyV9FF32Y7F50yZMp7mP+T2mJIWFx49zicqyC4uefHM17o6xKIVQ==}
 
-  idea-react@3.0.0-beta.4:
-    resolution: {integrity: sha512-UzRwmbn6psxZGrUBUqaehoBJm9RxH2HZRUE7AIn/FCDZJV/B/w7VWhtLys8CZzqOt8B7ptTG5ktigTVkROt9rA==}
+  idea-react@3.0.0-beta.5:
+    resolution: {integrity: sha512-gempxD9q+Rtwib1phNOvd1MQuQbJc8WTID5Kv8KjJr31/vgUyn5a4oEDGGz7+JWeQeoCmoJXfp5Py6zD1kgh0Q==}
     peerDependencies:
       mobx: '>=6'
       mobx-react: '>=9'
@@ -3382,10 +3379,6 @@ packages:
   supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
-
-  swiper@14.4.0:
-    resolution: {integrity: sha512-6axnAuBsttFJe0gwsM5tT203/Bts0vcI+FwIX6dqFE4pUFVW6qrdRprNFQVxOYMW7V0S6A/KIqJ6JaPpNN2MCw==}
-    engines: {node: '>= 4.7.0'}
 
   temp-dir@2.0.0:
     resolution: {integrity: sha512-aoBAniQmmwtcKp/7BzsH8Cxzv8OL736p7v1ihGb5e9DJ9kTwGWHrQrVB5+lfVDzfGrdRzXch+ig7LHaY1JTOrg==}
@@ -6284,7 +6277,7 @@ snapshots:
 
   idb@7.1.1: {}
 
-  idea-react@3.0.0-beta.4(mobx-react@10.0.3(mobx@7.1.5)(react@19.3.1))(mobx@7.1.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@6.0.3):
+  idea-react@3.0.0-beta.5(mobx-react@10.0.3(mobx@7.1.5)(react@19.3.1))(mobx@7.1.5)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@6.0.3):
     dependencies:
       '@editorjs/editorjs': 2.31.7
       '@editorjs/paragraph': 2.11.7
@@ -7440,8 +7433,6 @@ snapshots:
       has-flag: 4.0.0
 
   supports-preserve-symlinks-flag@1.0.0: {}
-
-  swiper@14.4.0: {}
 
   temp-dir@2.0.0: {}
 

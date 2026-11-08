@@ -14,10 +14,10 @@
 - 打包工具：[Parcel v2][9]
 - PWA 框架：[Workbox v7][10]
 - 组件引擎：[React v19][11]
-- 组件套件：[Idea React v3][12]（基于 Bootstrap v6）
+- 组件套件：[Idea-React v3][12]（基于 Bootstrap v6）
 - 路由组件：[React Router v7][13]
 - 时间轴组件：[React Chrono v3][14]
-- 轮播组件：[Swiper v14][15]
+- 轮播组件：[Idea-React Carousel][15]（基于 CSS scroll-snap）
 - CI/CD：GitHub [Actions][16] + [Pages][17]
 
 ## 项目结构
@@ -57,7 +57,7 @@ fcc.chengdu/
 
 本项目使用 Bootstrap 6、Idea React 与 LESS：
 
-- **Bootstrap 与组件**：Bootstrap 6 样式在 `public/index.html` 加载，组件使用 `idea-react`。
+- **Bootstrap 与组件**：Bootstrap 6、Bootstrap Icons 和 Idea React 样式在 `public/index.html` 集中加载，组件使用 `idea-react`
 - **工具类优先**：布局、间距、对齐、颜色和响应式优先使用 Bootstrap 工具类；当前响应式类采用 `lg:flex-row` 等 Bootstrap 6 语法。
 - **LESS**：仅在工具类无法表达具体样式时使用；样式模块采用 `.module.less`，由 Parcel 编译并隔离作用域。
 - **主题变量**：`src/theme.less` 定义公共颜色和尺寸变量。
@@ -159,7 +159,7 @@ Copyright © 2018-2026 fCC 成都社区
 [12]: https://idea-react.pages.dev/
 [13]: https://reactrouter.com/
 [14]: https://react-chrono.prabhumurthy.com/
-[15]: https://swiperjs.com/
+[15]: https://idea-react.pages.dev/components/carousel/
 [16]: https://github.com/features/actions
 [17]: https://pages.github.com/
 [18]: https://www.conventionalcommits.org/zh-hans/

@@ -18,6 +18,7 @@
             height: 420px;
         }
         .SloganContainer {
+            text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.35);
             position: absolute;
             left: 0;
             top: 50%;
@@ -45,26 +46,19 @@
                     margin-top: 32px;
                 }
                 a {
+                    --bs-btn-color: #fff;
+                    --bs-btn-bg: transparent;
+                    --bs-btn-border-color: #fff;
+                    --bs-btn-hover-color: #244d9f;
+                    --bs-btn-hover-bg: #fff;
+                    --bs-btn-hover-border-color: #fff;
                     color: #fff;
-                    display: inline-block;
-                    line-height: 44px;
-                    padding: 0 30px;
-                    margin-right: 10px;
-                    @media (max-width: 767.98px) {
-                        margin-right: 0;
-                        padding: 0 20px;
-                    }
-                    border: 1px solid #fff;
-                    border-radius: 22px;
+                    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.2);
                     &:hover {
-                        color: darken(#fff, 10%);
-                        border-color: darken(#fff, 10%);
+                        color: #244d9f;
+                        text-shadow: none;
                         text-decoration: none;
                     }
-                }
-                a:hover {
-                    background: #fff;
-                    color: #7ba2ff;
                 }
             }
         }

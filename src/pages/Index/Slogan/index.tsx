@@ -3,6 +3,8 @@
  * @author
  */
 
+import { Button } from 'idea-react';
+
 import * as styles from './index.module.less';
 
 const bannerIcon = new URL('../../../assets/images/banner-icon.png', import.meta.url) + '';
@@ -17,14 +19,24 @@ export const Slogan = () => (
                 </blockquote>
                 <div className={styles.SloganContent}>立即前往线上学习平台</div>
                 <div
-                    className={`${styles.MainLink} d-flex flex-wrap justify-content-center gap-3 md:justify-content-start md:gap-0`}
+                    className={`${styles.MainLink} d-flex flex-wrap justify-content-center gap-3 md:justify-content-start`}
                 >
-                    <a href="https://www.freecodecamp.org/chinese/" target="_blank">
+                    <Button
+                        className="rounded-pill px-5 py-3"
+                        variant="outline"
+                        href="https://www.freecodecamp.org/chinese/"
+                        target="_blank"
+                    >
                         中文版
-                    </a>
-                    <a href="https://www.freecodecamp.org/" target="_blank">
+                    </Button>
+                    <Button
+                        className="rounded-pill px-5 py-3"
+                        variant="outline"
+                        href="https://www.freecodecamp.org/"
+                        target="_blank"
+                    >
                         English version
-                    </a>
+                    </Button>
                 </div>
             </div>
             <img className={styles.BannerIcon} src={bannerIcon} />

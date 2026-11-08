@@ -1,90 +1,37 @@
-/**
- * @desc 大事件记录、展示板块
- * @author
- */
-import { Component } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
+import { Carousel, CarouselSlide, Container } from 'idea-react';
 
 import { events } from './events';
-import './style.less';
+import * as styles from './index.module.less';
 
-export class Events extends Component {
-    componentDidMount() {
-        this.setMarginLeft();
-        window.addEventListener('resize', this.setMarginLeft);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.setMarginLeft);
-    }
-
-    setMarginLeft = () => {
-        const bodyWidth = document.body.clientWidth,
-            panelWidth = document.querySelector('#index-events')?.clientWidth || 0;
-
-        const contentEvents = document.querySelector<HTMLElement>('.content-events');
-
-        if (contentEvents) contentEvents.style.marginRight = `${(panelWidth - bodyWidth) / 2}px`;
-    };
-
-    render() {
-        return (
-            <div className="Panel index-events">
-                <div className="MainContainer" id="index-events">
-                    {/* 标题 */}
-                    <div className="TitleRow">
-                        <div className="title-panel">
-                            <strong>社区大事件</strong>
-                            <div className="preloader">
-                                <span />
-                                <span />
-                                <span />
-                                <span />
-                            </div>
-                        </div>
-                        <div className="title-panel-bg">
-                            <p>Big</p>
-                            <p>even</p>
-                        </div>
-                    </div>
-
-                    <div className="content-events">
-                        <div className="events-slider">
-                            <i
-                                id="swiper-button-prev"
-                                className="iconfont icon-jiantou1-copy-copy-copy"
-                            />
-                            <i id="swiper-button-next" className="iconfont icon-jiantou1-copy" />
-                            <Swiper
-                                className="swiper-container"
-                                modules={[Navigation, Autoplay]}
-                                grabCursor
-                                slidesPerView={3}
-                                centeredSlides={false}
-                                slidesPerGroup={1}
-                                spaceBetween={65}
-                                loop
-                                autoplay={{
-                                    delay: 3000,
-                                    disableOnInteraction: false
-                                }}
-                                navigation={{
-                                    nextEl: '#swiper-button-next',
-                                    prevEl: '#swiper-button-prev'
-                                }}
-                            >
-                                {events.map(({ title, url }) => (
-                                    <SwiperSlide key={url + ''} className="event-panel">
-                                        <img src={url + ''} alt={title} />
-                                        <p className="text-white">{title}</p>
-                                    </SwiperSlide>
-                                ))}
-                            </Swiper>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-}
+export const Events = () => (
+    <section className={`${styles.events} py-12`}>
+        <Container>
+            <Carousel
+                aria-label="社区大事件"
+                auto
+                dark
+                innerClassName={styles.track}
+                controlsPlacement="top"
+                controlsStart={<h2 className="text-xl fg-white mb-0">社区大事件</h2>}
+                controlsClassName="d-flex flex-wrap justify-content-between align-items-center gap-3 fg-white mb-4"
+                itemsGap="1.5rem"
+                autoplay
+                interval={3000}
+                ends="loop"
+            >
+                {events.map(({ title, url }) => (
+                    <CarouselSlide key={url + ''} style={{ width: 'min(100%, 390px)' }}>
+                        <img
+                            className="d-block w-100 rounded shadow object-fit-cover"
+                            src={url + ''}
+                            alt={title}
+                            width={390}
+                            height={220}
+                        />
+                        <p className="fg-white text-center fw-bold mt-3 mb-0">{title}</p>
+                    </CarouselSlide>
+                ))}
+            </Carousel>
+        </Container>
+    </section>
+);
