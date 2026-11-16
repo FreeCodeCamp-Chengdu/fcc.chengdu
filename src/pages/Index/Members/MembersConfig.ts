@@ -142,3 +142,5 @@ export const MEMBERS = [
         urlType: URL_TYPE_CLASS.github
     }
 ];
+
+export type Member = (typeof MEMBERS)[number];

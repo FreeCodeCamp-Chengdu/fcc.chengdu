@@ -2,7 +2,7 @@
  * @desc 社区介绍板块
  * @author
  */
-import { Row, Col } from 'react-bootstrap';
+import { Col, Row } from 'idea-react';
 
 import * as styles from './index.module.less';
 

@@ -6,7 +6,7 @@ import '../../theme.less';
 
 import { FC } from 'react';
 import { Chrono, TimelineProps } from 'react-chrono';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Col, Container, Row } from 'idea-react';
 
 import eventList from '../../../tool/index.json';
 
@@ -44,7 +44,7 @@ export const Events: FC = () => (
                         primary: '#0077B6',
                         secondary: 'secondary',
                         cardBgColor: 'bg-light',
-                        titleColor: 'text-primary'
+                        titleColor: 'fg-primary'
                     }}
                     style={{
                         fontSizes: {
