@@ -62,7 +62,7 @@ export class Menu extends Component {
 
     render() {
         return (
-            <Navbar className="sticky-top z-3 bg-transparent" expand="lg" theme="dark">
+            <Navbar className="sticky-top z-3" translucent expand="lg" theme="dark">
                 <Container className="d-flex align-items-center justify-content-between py-2">
                     <NavbarBrand className="m-0" href="#/">
                         <img className="d-block" src={logo} height={45} alt="FCC 成都社区" />
